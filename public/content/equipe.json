@@ -1,0 +1,38 @@
+{
+  "title": "Notre équipe",
+  "subtitle": "Des dirigeants engagés pour élargir l'accès aux soins et à l'éducation sanitaire en Afrique.",
+  "members": [
+    {
+      "id": "dg-01",
+      "name": "Dr. Amina Okoro",
+      "role": "Directrice générale",
+      "bio": "Médecin de santé publique avec plus de quinze ans d'expérience dans le déploiement de programmes d'accès aux soins en Afrique de l'Ouest et centrale.",
+      "image": "/images/equipe/amina-okoro.svg",
+      "imageAlt": "Portrait de Dr. Amina Okoro, Directrice générale de MEDUC"
+    },
+    {
+      "id": "ops-02",
+      "name": "Jean-Baptiste Nguema",
+      "role": "Directeur des opérations",
+      "bio": "Spécialiste de la logistique sanitaire et de la coordination terrain. Il supervise le déploiement des programmes e-voucher auprès des établissements partenaires.",
+      "image": "/images/equipe/jean-baptiste-nguema.svg",
+      "imageAlt": "Portrait de Jean-Baptiste Nguema, Directeur des opérations"
+    },
+    {
+      "id": "part-03",
+      "name": "Fatou Diallo",
+      "role": "Directrice des partenariats",
+      "bio": "Elle construit et anime le réseau d'institutions, d'ONG et d'acteurs privés qui soutiennent la mission de MEDUC sur le continent.",
+      "image": "/images/equipe/fatou-diallo.svg",
+      "imageAlt": "Portrait de Fatou Diallo, Directrice des partenariats"
+    },
+    {
+      "id": "tech-04",
+      "name": "Kwame Mensah",
+      "role": "Directeur technique",
+      "bio": "Ingénieur systèmes responsable de la plateforme e-voucher et de l'infrastructure numérique au service des bénéficiaires et des prestataires de soins.",
+      "image": "/images/equipe/kwame-mensah.svg",
+      "imageAlt": "Portrait de Kwame Mensah, Directeur technique"
+    }
+  ]
+}

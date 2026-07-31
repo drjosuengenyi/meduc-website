@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Communauté autour d'un centre de santé">
+  <rect width="1600" height="900" fill="#0A1628"/>
+  <circle cx="400" cy="520" r="90" fill="#C9A059" opacity="0.45"/>
+  <circle cx="560" cy="540" r="70" fill="#FAF7EF" opacity="0.2"/>
+  <circle cx="700" cy="510" r="80" fill="#D4AF37" opacity="0.35"/>
+  <circle cx="860" cy="545" r="65" fill="#FAF7EF" opacity="0.18"/>
+  <rect x="980" y="360" width="380" height="280" rx="10" fill="#FAF7EF" opacity="0.12"/>
+  <rect x="1020" y="400" width="140" height="90" fill="#D4AF37" opacity="0.3"/>
+  <path d="M120 760 Q800 680 1480 760" fill="none" stroke="#D4AF37" stroke-opacity="0.4" stroke-width="3"/>
+</svg>

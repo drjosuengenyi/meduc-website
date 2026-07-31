@@ -1,0 +1,49 @@
+{
+  "title": "Nos partenaires",
+  "subtitle": "Un réseau d'institutions et d'organisations qui partagent notre ambition d'accès équitable aux soins.",
+  "partners": [
+    {
+      "id": "p-oms",
+      "name": "Alliance Santé Afrique",
+      "description": "Réseau continental de promotion de la couverture sanitaire universelle.",
+      "logo": "/images/partenaires/alliance-sante.svg",
+      "logoAlt": "Logo Alliance Santé Afrique",
+      "url": "https://example.org/alliance-sante"
+    },
+    {
+      "id": "p-min",
+      "name": "Ministères de la Santé partenaires",
+      "description": "Autorités nationales avec lesquelles MEDUC déploie des programmes d'accès aux soins.",
+      "logo": "/images/partenaires/ministeres-sante.svg",
+      "logoAlt": "Logo Ministères de la Santé partenaires"
+    },
+    {
+      "id": "p-ong",
+      "name": "Réseau ONG Santé",
+      "description": "Collectif d'organisations non gouvernementales actives en santé communautaire.",
+      "logo": "/images/partenaires/reseau-ong.svg",
+      "logoAlt": "Logo Réseau ONG Santé"
+    },
+    {
+      "id": "p-edu",
+      "name": "Institut de formation sanitaire",
+      "description": "Partenaire académique pour la formation des agents de santé et l'éducation sanitaire.",
+      "logo": "/images/partenaires/institut-formation.svg",
+      "logoAlt": "Logo Institut de formation sanitaire"
+    },
+    {
+      "id": "p-tech",
+      "name": "Connect Santé",
+      "description": "Partenaire technologique pour l'accès numérique aux services de santé.",
+      "logo": "/images/partenaires/connect-sante.svg",
+      "logoAlt": "Logo Connect Santé"
+    },
+    {
+      "id": "p-comm",
+      "name": "Fondations communautaires",
+      "description": "Fondations locales engagées dans le financement de l'accès aux soins de proximité.",
+      "logo": "/images/partenaires/fondations.svg",
+      "logoAlt": "Logo Fondations communautaires"
+    }
+  ]
+}
