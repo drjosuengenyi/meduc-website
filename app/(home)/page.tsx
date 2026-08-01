@@ -129,6 +129,7 @@ export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
   const [ussdStep, setUssdStep] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Langue sauvegardée (après hydratation, pour éviter tout décalage SSG/client).
   useEffect(() => {
@@ -177,6 +178,7 @@ export default function HomePage() {
   const goTo = useCallback(
     (id: string) => (event: React.MouseEvent) => {
       event.preventDefault();
+      setMenuOpen(false);
       document
         .getElementById(id)
         ?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -210,11 +212,14 @@ export default function HomePage() {
   return (
     <div className="aht" data-lang={lang}>
       {/* ── NAVIGATION ── */}
-      <nav id="main-nav" className={scrolled ? "scrolled" : undefined}>
+      <nav
+        id="main-nav"
+        className={scrolled || menuOpen ? "scrolled" : undefined}
+      >
         <a className="nav-brand" href="#hero" onClick={goTo("hero")}>
           Meduc<em>AHT</em>
         </a>
-        <div className="nav-links">
+        <div className={`nav-links${menuOpen ? " open" : ""}`}>
           {navLink("probleme", "Problème", "Problem")}
           {navLink("solution", "Solution", "Solution")}
           {navLink("comment", "Comment ça marche", "How it works")}
@@ -252,6 +257,15 @@ export default function HomePage() {
           <a className="nav-cta en" href="#contact" onClick={goTo("contact")}>
             Partner with Us
           </a>
+          <button
+            type="button"
+            className="nav-burger"
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            {menuOpen ? "✕" : "☰"}
+          </button>
         </div>
       </nav>
 
@@ -1260,14 +1274,14 @@ export default function HomePage() {
               creates value for your organization.
             </p>
             <div className="cta-btns">
-              <a className="btn-primary fr" href="mailto:jo@meduc.tech">
+              <a className="btn-primary fr" href="mailto:contact@meduc.tech">
                 Contacter Dr. Ngenyibungi M.J.
               </a>
-              <a className="btn-primary en" href="mailto:jo@meduc.tech">
+              <a className="btn-primary en" href="mailto:contact@meduc.tech">
                 Contact Dr. Ngenyibungi M.J.
               </a>
-              <a className="btn-outline" href="mailto:jo@meduc.tech">
-                jo@meduc.tech
+              <a className="btn-outline" href="mailto:contact@meduc.tech">
+                contact@meduc.tech
               </a>
               <div className="ussd-chip">*707#</div>
             </div>
@@ -1289,7 +1303,7 @@ export default function HomePage() {
               <br />
               D-U-N-S : 366868380
               <br />
-              meduc.tech · jo@meduc.tech
+              meduc.tech · contact@meduc.tech
               <br />
               Dr. Ngenyibungi M.J. — DG/COO &amp; IP Holder
             </div>
@@ -1333,7 +1347,7 @@ export default function HomePage() {
           </div>
           <div className="ft-col">
             <div className="ft-col-title">Contact</div>
-            <a href="mailto:jo@meduc.tech">jo@meduc.tech</a>
+            <a href="mailto:contact@meduc.tech">contact@meduc.tech</a>
             <a href="https://meduc.tech">meduc.tech</a>
             <a href="tel:*707%23">USSD *707#</a>
           </div>
