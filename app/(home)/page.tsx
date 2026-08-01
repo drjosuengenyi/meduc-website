@@ -501,7 +501,7 @@ export default function HomePage() {
       </div>
 
       {/* ── PROBLÈME ── */}
-      <section id="probleme">
+      <section id="probleme" className="section-light">
         <div className="w">
           <div className="section-label">
             <div className="sl-line" aria-hidden />

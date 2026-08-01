@@ -1140,6 +1140,59 @@
   padding: 3px 10px;
 }
 
+/* ── VARIANTE CLAIRE — fond blanc à tendance dorée ──
+   Utilisée par la section « Une crise sanitaire structurelle ».
+   Contraste retravaillé pour le fond clair : encre navy pour les
+   titres, or foncé (#8f6b1f) pour les accents — lisibilité AA. */
+.aht section.section-light {
+  background: radial-gradient(
+      ellipse 70% 60% at 85% 0%,
+      rgba(201, 160, 89, 0.16),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 50% 55% at 0% 100%,
+      rgba(201, 160, 89, 0.1),
+      transparent
+    ),
+    linear-gradient(180deg, #fffefb 0%, #f7f0df 100%);
+  border-top: 1px solid rgba(201, 160, 89, 0.28);
+  border-bottom: 1px solid rgba(201, 160, 89, 0.28);
+}
+.aht .section-light h2 {
+  color: #0a1628;
+}
+.aht .section-light h2 em {
+  color: #8f6b1f;
+}
+.aht .section-light .sl-line {
+  background: #8f6b1f;
+}
+.aht .section-light .sl-txt {
+  color: #8f6b1f;
+}
+.aht .section-light .section-sub {
+  color: #4a5568;
+}
+.aht .section-light .prob-card {
+  background: #ffffff;
+  border: 1px solid rgba(201, 160, 89, 0.35);
+  border-top: 3px solid rgba(139, 26, 26, 0.55);
+  box-shadow: 0 12px 32px rgba(10, 22, 40, 0.07);
+}
+.aht .section-light .pc-title {
+  color: #0a1628;
+}
+.aht .section-light .pc-body {
+  color: #4a5568;
+}
+.aht .section-light strong {
+  color: #0a1628;
+}
+.aht .section-light p {
+  color: #4a5568;
+}
+
 @media (max-width: 860px) {
   .aht .hero .w {
     grid-template-columns: 1fr;
