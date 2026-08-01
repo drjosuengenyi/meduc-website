@@ -21,7 +21,8 @@ export default function TrustPillars() {
     <section className="section-pad bg-cream" aria-labelledby="trust-heading">
       <div className="container-site">
         <div className="max-w-2xl">
-          <h2 id="trust-heading" className="text-3xl md:text-4xl">
+          <p className="eyebrow text-gold-deep">Nos fondations</p>
+          <h2 id="trust-heading" className="mt-3 text-3xl md:text-4xl">
             Ce qui guide notre action
           </h2>
           <p className="mt-3 text-ink-muted">
@@ -29,11 +30,14 @@ export default function TrustPillars() {
             chaque programme.
           </p>
         </div>
-        <ul className="mt-12 grid gap-10 md:grid-cols-3">
+        <ul className="mt-12 grid gap-6 md:grid-cols-3">
           {PILLARS.map((pillar, index) => (
-            <li key={pillar.title} className="relative pt-6">
+            <li
+              key={pillar.title}
+              className="card-lift group relative border border-border bg-cream p-7"
+            >
               <span
-                className="absolute left-0 top-0 h-0.5 w-12 bg-gold"
+                className="absolute left-0 top-0 h-0.5 w-12 bg-gold transition-all duration-300 group-hover:w-full"
                 aria-hidden
               />
               <p className="font-serif text-sm tracking-widest text-gold-deep">

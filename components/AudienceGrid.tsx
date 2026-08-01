@@ -29,7 +29,8 @@ export default function AudienceGrid() {
     >
       <div className="container-site">
         <div className="max-w-2xl">
-          <h2 id="audience-heading" className="text-3xl md:text-4xl">
+          <p className="eyebrow text-gold-deep">Publics servis</p>
+          <h2 id="audience-heading" className="mt-3 text-3xl md:text-4xl">
             Pour qui nous agissons
           </h2>
           <p className="mt-3 text-ink-muted">
@@ -37,13 +38,14 @@ export default function AudienceGrid() {
             rapprocher les soins des personnes.
           </p>
         </div>
-        <ul className="mt-12 grid gap-8 sm:grid-cols-2">
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2">
           {AUDIENCES.map((item) => (
             <li
               key={item.title}
-              className="border-l-2 border-gold pl-5"
+              className="card-lift border border-border bg-cream p-7"
             >
-              <h3 className="text-xl">{item.title}</h3>
+              <span className="block h-0.5 w-10 bg-gold" aria-hidden />
+              <h3 className="mt-4 text-xl">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                 {item.description}
               </p>

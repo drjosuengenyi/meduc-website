@@ -40,6 +40,25 @@
     padding-block: var(--section-y);
   }
 
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em];
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-8 bg-gold;
+  }
+
+  .card-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -18px rgba(10, 22, 40, 0.25);
+  }
+
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-6 py-3 text-sm font-semibold tracking-wide text-navy no-underline hover:bg-gold-deep;
   }
@@ -100,10 +119,59 @@
   content: counter(impact);
 }
 
+/* Hero entrance — CSS only */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-rise {
+  opacity: 0;
+  animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--rise-delay, 0s);
+}
+
+/* Impact progress bar — CSS only */
+@keyframes impact-progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress, 34%);
+  }
+}
+
+.impact-bar {
+  animation: impact-progress 2.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+  width: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .impact-count {
     animation: none;
     --count-current: var(--count-target);
+  }
+
+  .hero-rise {
+    animation: none;
+    opacity: 1;
+  }
+
+  .impact-bar {
+    animation: none;
+    width: var(--progress, 34%);
+  }
+
+  .card-lift,
+  .card-lift:hover {
+    transition: none;
+    transform: none;
   }
 
   html {

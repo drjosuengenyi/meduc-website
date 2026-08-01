@@ -24,7 +24,11 @@ export default function ImpactCounter({
     >
       <div className="container-site">
         <div className="max-w-2xl">
-          <h2 id="impact-heading" className="text-3xl text-cream md:text-4xl">
+          <p className="eyebrow text-gold">Trajectoire 2030</p>
+          <h2
+            id="impact-heading"
+            className="mt-3 text-3xl text-cream md:text-4xl"
+          >
             Notre ambition d&apos;impact
           </h2>
           <p className="mt-3 text-cream/75">{description}</p>
@@ -76,9 +80,28 @@ export default function ImpactCounter({
           </div>
         </div>
 
-        <p className="mt-8 font-serif text-xl text-gold-soft md:text-2xl">
-          {currentValue}M / {targetValue}M {horizon}
-        </p>
+        <div className="mt-10 max-w-2xl">
+          <div
+            className="h-1.5 w-full overflow-hidden rounded-full bg-cream/10"
+            role="progressbar"
+            aria-valuenow={currentValue}
+            aria-valuemin={0}
+            aria-valuemax={targetValue}
+            aria-label={`Progression : ${currentValue} millions sur ${targetValue} millions`}
+          >
+            <div
+              className="impact-bar h-full rounded-full bg-gradient-to-r from-gold-deep to-gold"
+              style={
+                {
+                  "--progress": `${Math.round((currentValue / targetValue) * 100)}%`,
+                } as CSSProperties
+              }
+            />
+          </div>
+          <p className="mt-4 font-serif text-xl text-gold-soft md:text-2xl">
+            {currentValue}M / {targetValue}M {horizon}
+          </p>
+        </div>
       </div>
     </section>
   );
