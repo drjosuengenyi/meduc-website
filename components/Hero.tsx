@@ -22,8 +22,8 @@ function delay(seconds: number): CSSProperties {
 }
 
 export default function Hero({
-  title = "Soins accessibles, communautés renforcées",
-  subtitle = "MEDUC déploie des programmes d'accès aux soins et d'éducation sanitaire pour rapprocher les services essentiels des populations.",
+  title = "Accès Inclusif aux Soins de Santé.",
+  subtitle = "De la Crise sanitaire à l'opportunité d'Investissement et emplois des jeunes. La RDC se reconstruit, l'Afrique innove.",
   primaryCta = { href: "/evoucher/", label: "Découvrir e-Voucher" },
   secondaryCta = { href: "/a-propos/", label: "Notre mission" },
   imageSrc = "/images/hero-care.svg",
