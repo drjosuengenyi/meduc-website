@@ -1,0 +1,56 @@
+{
+  "name": "MEDUC AHT — Charte de couleurs",
+  "version": "1.0.0",
+  "locked": true,
+  "note": "Ne pas modifier. Alignée sur styles/tokens.css et styles/cms.css.",
+  "sitePublic": {
+    "surfaces": {
+      "cream": "#FAF7EF",
+      "creamMuted": "#F3EFE4",
+      "navy": "#0A1628",
+      "navySoft": "#152238",
+      "navyMuted": "#2A3A52"
+    },
+    "accents": {
+      "gold": "#D4AF37",
+      "goldDeep": "#C9A059",
+      "goldSoft": "#E8D5A3"
+    },
+    "text": {
+      "ink": "#0A1628",
+      "inkMuted": "#4A5568",
+      "inkInverse": "#FAF7EF"
+    },
+    "borders": {
+      "border": "#E4DFD2",
+      "borderStrong": "#C9A059"
+    },
+    "typography": {
+      "serif": "Georgia, Times New Roman, Times, serif",
+      "sans": "system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    }
+  },
+  "cmsDashboard": {
+    "surfaces": {
+      "navy": "#0B0F19",
+      "navy800": "#111827",
+      "navy700": "#151E2E",
+      "navy600": "#1B2536",
+      "void": "#060911"
+    },
+    "accents": {
+      "gold": "#D4AF37",
+      "goldLight": "#FACC15",
+      "goldDark": "#9C7A2E",
+      "cyan": "#22D3EE"
+    },
+    "text": {
+      "text": "#E2E8F0",
+      "muted": "#94A3B8"
+    },
+    "effects": {
+      "glassBackground": "rgba(15, 23, 42, 0.72)",
+      "glassBorder": "rgba(148, 163, 184, 0.12)"
+    }
+  }
+}

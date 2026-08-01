@@ -1,0 +1,129 @@
+/* MEDUC AHT CMS — OLED navy + satin gold */
+.cms-root {
+  --cms-navy: #0b0f19;
+  --cms-navy-800: #111827;
+  --cms-navy-700: #151e2e;
+  --cms-navy-600: #1b2536;
+  --cms-gold: #d4af37;
+  --cms-gold-light: #facc15;
+  --cms-gold-dark: #9c7a2e;
+  --cms-cyan: #22d3ee;
+  --cms-text: #e2e8f0;
+  --cms-muted: #94a3b8;
+  background: radial-gradient(
+    circle at top left,
+    #111827 0%,
+    #0b0f19 55%,
+    #060911 100%
+  );
+  color: var(--cms-text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+.cms-glass {
+  background-color: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.cms-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.cms-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
+}
+
+.cms-nav-active {
+  color: #facc15;
+  background: rgba(212, 175, 55, 0.08);
+  box-shadow: inset 3px 0 0 0 #d4af37;
+}
+
+.cms-shadow-gold {
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.35),
+    0 8px 30px rgba(212, 175, 55, 0.08);
+}
+
+.cms-tpl-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.cms-tpl-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4),
+    0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.cms-view {
+  animation: cmsFadeIn 0.25s ease;
+}
+@keyframes cmsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cms-dropzone.dragover {
+  border-color: #facc15;
+  background: rgba(250, 204, 21, 0.06);
+}
+
+.cms-toast {
+  animation: cmsSlideUp 0.25s ease;
+}
+@keyframes cmsSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cms-theme-selected {
+  box-shadow: 0 0 0 2px #0b0f19, 0 0 0 4px #facc15;
+}
+
+.cms-layout-selected {
+  border-color: #facc15;
+  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.35);
+  background: rgba(250, 204, 21, 0.06);
+}
+
+.cms-richbody:empty:before {
+  content: attr(data-placeholder);
+  color: #64748b;
+}
+
+.cms-toolbar-active {
+  background: rgba(250, 204, 21, 0.15);
+  color: #facc15;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #cms-print-export,
+  #cms-print-export * {
+    visibility: visible;
+  }
+  #cms-print-export {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 24px;
+    background: #ffffff;
+    color: #111827;
+  }
+}
