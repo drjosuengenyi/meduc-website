@@ -207,6 +207,9 @@
   padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
+  /* Fond de la première section : navy profond (#00040F),
+     prioritaire sur l'alternance section:nth-child(even). */
+  background: var(--navy);
 }
 .aht .hero-bg {
   position: absolute;

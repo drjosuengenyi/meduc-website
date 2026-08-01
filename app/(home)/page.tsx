@@ -150,6 +150,16 @@ export default function HomePage() {
     }
   }, []);
 
+  // Fond du body en navy profond (#00040F) sur la page d'accueil,
+  // pour éviter tout flash clair au sur-défilement ; restauré en quittant.
+  useEffect(() => {
+    const previous = document.body.style.backgroundColor;
+    document.body.style.backgroundColor = "#00040f";
+    return () => {
+      document.body.style.backgroundColor = previous;
+    };
+  }, []);
+
   // Fond de navigation au défilement.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
