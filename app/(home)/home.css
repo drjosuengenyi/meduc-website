@@ -29,9 +29,12 @@
   --w1: rgba(255, 255, 255, 0.08);
   --rule: rgba(255, 255, 255, 0.08);
   --rule2: #e2dfd7;
-  --sans: var(--font-inter), "Inter", system-ui, sans-serif;
-  --serif: var(--font-playfair), "Playfair Display", Georgia, serif;
-  --mono: var(--font-jbmono), "JetBrains Mono", monospace;
+  /* Charte typographique du site (styles/tokens.css) :
+     Georgia pour les titres, sans-serif système pour le corps.
+     Monospace système pour les éléments techniques (USSD, badges). */
+  --sans: var(--font-sans);
+  --serif: var(--font-serif);
+  --mono: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
   --radius: 14px;
 
   background: var(--navy);
