@@ -1236,8 +1236,8 @@ export default function HomePage() {
                 366868380). L’infrastructure Azure est déployée en production.
                 Nous sommes en discussions avec 5 hôpitaux et 2 opérateurs
                 télécom. La prochaine étape est le{" "}
-                <strong>pilote 3 provinces</strong> (Kinshasa, Nord-Kivu,
-                Katanga), suivi du déploiement national 26 provinces.
+                <strong>pilote 3 provinces</strong> (Kinshasa, Bandundu,
+                Kasaï), suivi du déploiement national 26 provinces.
               </div>
               <div className="faq-a-inner en">
                 Meduc GM Africa is <strong>dual-incorporated</strong> (DRC:
@@ -1245,7 +1245,7 @@ export default function HomePage() {
                 Azure infrastructure is deployed in production. We are in
                 discussions with 5 hospitals and 2 telecom operators. The next
                 step is the <strong>3-province pilot</strong> (Kinshasa,
-                Nord-Kivu, Katanga), followed by national 26-province
+                Bandundu, Kasaï), followed by national 26-province
                 deployment.
               </div>
             </FaqItem>
@@ -1287,10 +1287,10 @@ export default function HomePage() {
             </p>
             <div className="cta-btns">
               <a className="btn-primary fr" href="mailto:contact@meduc.tech">
-                Contacter Dr. Ngenyibungi M.J.
+                Contacter l’équipe admin et finances
               </a>
               <a className="btn-primary en" href="mailto:contact@meduc.tech">
-                Contact Dr. Ngenyibungi M.J.
+                Contact the Admin &amp; Finance Team
               </a>
               <a className="btn-outline" href="mailto:contact@meduc.tech">
                 contact@meduc.tech
