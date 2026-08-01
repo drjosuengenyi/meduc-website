@@ -310,12 +310,14 @@ export default function HomePage() {
             </h1>
 
             <p className="hero-hook fr">
-              La RDC traverse une crise sanitaire profonde. MeducAHT la
-              transforme en opportunité pour chaque acteur.
+              La RDC à l’heure de l’innovation. Une infrastructure de
+              confiance basée sur le VMS, inscrite sur Azure Ledger, pour un
+              accès inclusif et équitable aux soins de santé.
             </p>
             <p className="hero-hook en">
-              The DRC faces a deep healthcare crisis. MeducAHT turns it into
-              opportunity for every stakeholder.
+              The DRC in the age of innovation. A trusted infrastructure built
+              on VMS, recorded on Azure Ledger, for inclusive and equitable
+              access to healthcare.
             </p>
 
             <p className="hero-body fr">
