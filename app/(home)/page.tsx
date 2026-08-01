@@ -869,7 +869,7 @@ export default function HomePage() {
       </section>
 
       {/* ── ACTEURS ── */}
-      <section id="acteurs">
+      <section id="acteurs" className="section-light">
         <div className="w">
           <div className="section-label">
             <div className="sl-line" aria-hidden />
