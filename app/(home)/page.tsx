@@ -243,6 +243,18 @@ export default function HomePage() {
             FAQ
           </a>
           {navLink("contact", "Contact", "Contact")}
+          <a className="nl fr" href="/presentation/">
+            Présentation
+          </a>
+          <a className="nl en" href="/presentation/">
+            Presentation
+          </a>
+          <a className="nl fr" href="/equipe/">
+            Équipe
+          </a>
+          <a className="nl en" href="/equipe/">
+            Team
+          </a>
         </div>
         <div className="nav-right">
           <div className="lang-toggle">
@@ -1355,6 +1367,18 @@ export default function HomePage() {
             </a>
             <a href="#faq" onClick={goTo("faq")}>
               FAQ
+            </a>
+            <a href="/presentation/" className="fr">
+              Présentation MEDUC
+            </a>
+            <a href="/presentation/" className="en">
+              MEDUC Presentation
+            </a>
+            <a href="/equipe/" className="fr">
+              Équipe
+            </a>
+            <a href="/equipe/" className="en">
+              Team
             </a>
           </div>
           <div className="ft-col">
