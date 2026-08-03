@@ -16,7 +16,9 @@ export default function Footer() {
     <footer className="border-t border-border bg-navy text-cream">
       <div className="container-site section-pad grid gap-10 md:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="font-serif text-2xl text-cream">MEDUC</p>
+          <p className="font-serif text-2xl text-cream">
+            MEDUC <span className="text-[#5b9ef5]">GM</span>
+          </p>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-cream/75">
             Accès équitable aux soins et à l&apos;éducation sanitaire pour les
             communautés d&apos;Afrique.
@@ -39,7 +41,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-site flex flex-col gap-2 py-5 text-xs text-cream/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} MEDUC. Tous droits réservés.</p>
+          <p>© {year} MEDUC GM. Tous droits réservés.</p>
           <p>Export statique · Azure Static Web Apps</p>
         </div>
       </div>

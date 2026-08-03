@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "MEDUC — Accès aux soins et éducation sanitaire",
-    template: "%s · MEDUC",
+    default: "MEDUC GM — Accès aux soins et éducation sanitaire",
+    template: "%s · MEDUC GM",
   },
   description:
-    "MEDUC déploie des programmes d'accès aux soins et d'éducation sanitaire pour les communautés d'Afrique.",
+    "MEDUC GM déploie des programmes d'accès aux soins et d'éducation sanitaire pour les communautés d'Afrique.",
   metadataBase: new URL("https://meduc.example.org"),
 };
 

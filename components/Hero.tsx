@@ -63,7 +63,7 @@ export default function Hero({
           className="hero-rise mt-4 font-serif text-4xl tracking-tight text-gold sm:text-5xl md:text-6xl lg:text-7xl"
           style={delay(0.1)}
         >
-          MEDUC
+          MEDUC <span className="text-[#5b9ef5]">GM</span>
         </p>
 
         <h1

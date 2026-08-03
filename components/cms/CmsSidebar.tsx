@@ -43,7 +43,7 @@ export default function CmsSidebar({
           </div>
           <div>
             <div className="text-sm font-extrabold tracking-wide text-slate-50">
-              MEDUC AHT
+              MEDUC GM AHT
             </div>
             <div className="text-[10px] uppercase tracking-[0.2em] text-[#FACC15]/80">
               Content Manager

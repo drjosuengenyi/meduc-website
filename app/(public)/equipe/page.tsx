@@ -16,7 +16,10 @@ export default function EquipePage() {
     <>
       <section className="section-pad bg-cream border-b border-border">
         <div className="container-site max-w-3xl">
-          <p className="font-serif text-sm tracking-widest text-gold-deep">
+          <p className="font-serif text-4xl text-gold md:text-5xl">
+            MEDUC <span className="text-[#1a6fd4]">GM</span>
+          </p>
+          <p className="mt-4 font-serif text-sm tracking-widest text-gold-deep">
             LEADERSHIP
           </p>
           <h1 className="mt-3 text-4xl md:text-5xl">{equipe.title}</h1>

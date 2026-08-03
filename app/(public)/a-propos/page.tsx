@@ -27,7 +27,9 @@ export default function AProposPage() {
           />
         </div>
         <div className="container-site relative py-24 md:py-32">
-          <p className="font-serif text-4xl text-gold md:text-5xl">MEDUC</p>
+          <p className="font-serif text-4xl text-gold md:text-5xl">
+            MEDUC <span className="text-[#1a6fd4]">GM</span>
+          </p>
           <h1 className="mt-4 max-w-2xl font-serif text-3xl text-cream md:text-5xl">
             À propos de notre mission
           </h1>

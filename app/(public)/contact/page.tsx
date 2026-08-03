@@ -11,7 +11,9 @@ export default function ContactPage() {
     <>
       <section className="section-pad bg-navy">
         <div className="container-site max-w-3xl">
-          <p className="font-serif text-4xl text-gold">MEDUC</p>
+          <p className="font-serif text-4xl text-gold">
+            MEDUC <span className="text-[#1a6fd4]">GM</span>
+          </p>
           <h1 className="mt-4 text-4xl text-cream md:text-5xl">Contact</h1>
           <p className="mt-5 text-lg text-cream/80">
             Une question sur nos programmes, un projet de partenariat ou une
