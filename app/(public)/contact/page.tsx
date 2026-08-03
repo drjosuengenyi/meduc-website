@@ -39,9 +39,9 @@ export default function ContactPage() {
               <div>
                 <dt className="font-semibold text-navy">Bureau SA</dt>
                 <dd className="mt-1 text-ink-muted">
-                  144 Begonia Rd, Kyalami,
+                  144, Begonia Rd, Kyalami,
                   <br />
-                  Johannesburg 1684, Afrique du Sud
+                  Johannesburg 1684, SA
                 </dd>
               </div>
               <div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
                     href="tel:+27617692109"
                     className="text-navy underline-offset-4 hover:text-gold-deep hover:underline"
                   >
-                    +27 61 769 2109
+                    +27617692109
                   </a>
                 </dd>
               </div>
