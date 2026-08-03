@@ -29,18 +29,30 @@ export default function ContactPage() {
                 <dt className="font-semibold text-navy">Courriel</dt>
                 <dd className="mt-1 text-ink-muted">
                   <a
-                    href="mailto:contact@meduc.example.org"
+                    href="mailto:contact@meduc.tech"
                     className="text-navy underline-offset-4 hover:text-gold-deep hover:underline"
                   >
-                    contact@meduc.example.org
+                    contact@meduc.tech
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="font-semibold text-navy">Siège</dt>
+                <dt className="font-semibold text-navy">Bureau SA</dt>
                 <dd className="mt-1 text-ink-muted">
-                  Bureau régional Afrique — adresse indicative pour le site
-                  public.
+                  144 Begonia Rd, Kyalami,
+                  <br />
+                  Johannesburg 1684, Afrique du Sud
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-navy">Téléphone</dt>
+                <dd className="mt-1 text-ink-muted">
+                  <a
+                    href="tel:+27617692109"
+                    className="text-navy underline-offset-4 hover:text-gold-deep hover:underline"
+                  >
+                    +27 61 769 2109
+                  </a>
                 </dd>
               </div>
               <div>
@@ -54,7 +66,7 @@ export default function ContactPage() {
 
           <form
             className="space-y-5"
-            action="mailto:contact@meduc.example.org"
+            action="mailto:contact@meduc.tech"
             method="post"
             encType="text/plain"
           >
