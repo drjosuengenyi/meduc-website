@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -28,10 +29,20 @@ export default function Header() {
       <div className="container-site flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
           href="/"
-          className="font-serif text-xl tracking-tight text-navy no-underline md:text-2xl"
+          className="flex items-center gap-2.5 font-serif text-xl tracking-tight text-navy no-underline md:text-2xl"
           onClick={() => setOpen(false)}
         >
-          MEDUC
+          <Image
+            src="/images/meduc-logo.png"
+            alt="Logo MEDUC GM — livre ouvert et caducée"
+            width={44}
+            height={44}
+            className="h-10 w-10 object-contain md:h-11 md:w-11"
+            priority
+          />
+          <span>
+            MEDUC <span className="text-[#1a6fd4]">GM</span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">

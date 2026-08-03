@@ -227,7 +227,14 @@ export default function HomePage() {
         className={scrolled || menuOpen ? "scrolled" : undefined}
       >
         <a className="nav-brand" href="#hero" onClick={goTo("hero")}>
-          Meduc<em>AHT</em>
+          <img
+            src="/images/meduc-logo.png"
+            alt="Logo MEDUC GM"
+            className="brand-logo"
+            width={34}
+            height={34}
+          />
+          Meduc <span className="brand-gm">GM</span> <em>AHT</em>
         </a>
         <div className={`nav-links${menuOpen ? " open" : ""}`}>
           {navLink("probleme", "Problème", "Problem")}
@@ -1318,7 +1325,15 @@ export default function HomePage() {
         <div className="w">
           <div>
             <div className="ft-brand">
-              Meduc<em>AHT</em>
+              <img
+                src="/images/meduc-logo.png"
+                alt=""
+                aria-hidden
+                className="brand-logo"
+                width={38}
+                height={38}
+              />
+              Meduc <span className="brand-gm">GM</span> <em>AHT</em>
             </div>
             <div className="ft-reg">
               Meduc GM Africa SARL

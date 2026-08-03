@@ -95,6 +95,29 @@
   font-style: normal;
   color: var(--gold);
 }
+.aht .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aht .brand-logo {
+  height: 34px;
+  width: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.aht .brand-gm {
+  color: #5b9ef5;
+}
+.aht .ft-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.aht .ft-brand .brand-logo {
+  height: 38px;
+  width: 38px;
+}
 .aht .nav-links {
   display: flex;
   gap: 0;
