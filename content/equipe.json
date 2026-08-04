@@ -21,13 +21,22 @@
       "email": "m.aminata@meduc.tech"
     },
     {
+      "id": "cfo-01",
+      "name": "Etienne Mbula",
+      "role": "CFO MEDUC GM, DRC",
+      "bio": "Chief Financial Officer de Meduc GM en RDC. Il supervise la gouvernance financière, la trésorerie et la conformité des flux MeducAHT au service de la solvabilité hospitalière et de la transparence institutionnelle.",
+      "image": "/images/equipe/etienne-mbula.png",
+      "imageAlt": "Portrait de Etienne Mbula, CFO MEDUC GM DRC",
+      "email": "e.mbula@meduc.tech"
+    },
+    {
       "id": "commercial-01",
       "name": "Jeremie Tuambilangane",
       "role": "Directeur commercial",
       "bio": "Directeur commercial de Meduc GM. Il développe les partenariats commerciaux, le réseau d'établissements et la croissance de MeducAHT auprès des acteurs de santé, des opérateurs et des institutions en RDC.",
       "image": "/images/equipe/jeremie-tuambilangane.png",
       "imageAlt": "Portrait de Jeremie Tuambilangane, Directeur commercial de MEDUC GM",
-      "email": "t.jereie@meduc.tech"
+      "email": "t.jeremie@meduc.tech"
     },
     {
       "id": "part-03",

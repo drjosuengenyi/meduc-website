@@ -288,6 +288,11 @@ const fr: Dictionary = {
         bio: "Directrice générale de Meduc RDC. Elle pilote les opérations nationales, la coordination avec les autorités sanitaires et le déploiement de MeducAHT sur le territoire congolais.",
         imageAlt: "Portrait de Aminata Mushiya, DG MEDUC RDC",
       },
+      "cfo-01": {
+        role: "CFO MEDUC GM, DRC",
+        bio: "Chief Financial Officer de Meduc GM en RDC. Il supervise la gouvernance financière, la trésorerie et la conformité des flux MeducAHT au service de la solvabilité hospitalière et de la transparence institutionnelle.",
+        imageAlt: "Portrait de Etienne Mbula, CFO MEDUC GM DRC",
+      },
       "part-03": {
         role: "Directrice des partenariats",
         bio: "Elle construit et anime le réseau d'institutions, d'ONG et d'acteurs privés qui soutiennent la mission de MEDUC GM sur le continent.",
@@ -687,6 +692,11 @@ const en: Dictionary = {
         role: "DG MEDUC RDC",
         bio: "Managing Director of Meduc RDC. She leads national operations, coordination with health authorities and MeducAHT deployment across the Congolese territory.",
         imageAlt: "Portrait of Aminata Mushiya, DG MEDUC RDC",
+      },
+      "cfo-01": {
+        role: "CFO MEDUC GM, DRC",
+        bio: "Chief Financial Officer of Meduc GM in the DRC. He oversees financial governance, treasury and compliance of MeducAHT flows in support of hospital solvency and institutional transparency.",
+        imageAlt: "Portrait of Etienne Mbula, CFO MEDUC GM DRC",
       },
       "part-03": {
         role: "Director of Partnerships",
