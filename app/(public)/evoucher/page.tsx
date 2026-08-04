@@ -1,27 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import EvoucherParcours from "@/components/EvoucherParcours";
+import "./evoucher-parcours.css";
 
 export const metadata: Metadata = {
   title: "e-Voucher",
   description:
-    "Le dispositif e-voucher MEDUC pour faciliter l'accès aux soins essentiels.",
+    "Le dispositif e-voucher MEDUC GM pour faciliter l'accès aux soins essentiels via USSD *707#.",
 };
-
-const STEPS = [
-  {
-    title: "Éligibilité",
-    body: "Les ménages identifiés via les programmes partenaires reçoivent un bon numérique d'accès aux soins ciblés.",
-  },
-  {
-    title: "Orientation",
-    body: "Le bénéficiaire est orienté vers un établissement du réseau, avec des informations claires sur le parcours.",
-  },
-  {
-    title: "Prise en charge",
-    body: "L'établissement valide le e-voucher et délivre les services prévus, dans le respect du protocole du programme.",
-  },
-] as const;
 
 export default function EvoucherPage() {
   return (
@@ -60,23 +47,7 @@ export default function EvoucherPage() {
           <h2 className="max-w-2xl text-3xl md:text-4xl">
             Comment fonctionne le parcours
           </h2>
-          <ol className="mt-12 grid gap-10 md:grid-cols-3">
-            {STEPS.map((step, index) => (
-              <li key={step.title} className="relative pt-6">
-                <span
-                  className="absolute left-0 top-0 h-0.5 w-12 bg-gold"
-                  aria-hidden
-                />
-                <p className="font-serif text-sm tracking-widest text-gold-deep">
-                  Étape 0{index + 1}
-                </p>
-                <h3 className="mt-3 text-xl">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                  {step.body}
-                </p>
-              </li>
-            ))}
-          </ol>
+          <EvoucherParcours />
         </div>
       </section>
 
@@ -84,7 +55,7 @@ export default function EvoucherPage() {
         <div className="container-site grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="text-3xl">Pour les établissements</h2>
-            <p className="mt-4 text-ink-muted">
+            <p className="mt-4 text-justify text-ink-muted">
               Rejoindre le réseau e-voucher, c&apos;est accueillir des
               bénéficiaires orientés, disposer d&apos;un flux de validation
               simple et renforcer la continuité des soins de proximité.

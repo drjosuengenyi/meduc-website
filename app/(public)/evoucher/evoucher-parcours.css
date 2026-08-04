@@ -1,0 +1,879 @@
+/* Parcours e-Voucher — isolé sous .evo-parcours
+   Typographie : charte du site (Georgia + sans système) */
+
+.evo-parcours {
+  --ep-navy: #00040f;
+  --ep-n2: #071428;
+  --ep-gold: #c9a059;
+  --ep-g2: #e8c97a;
+  --ep-gt: rgba(201, 160, 89, 0.12);
+  --ep-gb: rgba(201, 160, 89, 0.28);
+  --ep-azure: #1a6fd4;
+  --ep-at: rgba(26, 111, 212, 0.1);
+  --ep-ab: rgba(26, 111, 212, 0.25);
+  --ep-green: #0a8a44;
+  --ep-nt: rgba(10, 138, 68, 0.1);
+  --ep-nb: rgba(10, 138, 68, 0.25);
+  --ep-violet: #6d28d9;
+  --ep-vt: rgba(109, 40, 217, 0.1);
+  --ep-vb: rgba(109, 40, 217, 0.25);
+  --ep-w: #ffffff;
+  --ep-w6: rgba(255, 255, 255, 0.6);
+  --ep-w3: rgba(255, 255, 255, 0.28);
+  --ep-rule: rgba(255, 255, 255, 0.08);
+  --ep-sans: var(--font-sans);
+  --ep-serif: var(--font-serif);
+  --ep-mono: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
+
+  background: var(--ep-navy);
+  color: var(--ep-w);
+  font-family: var(--ep-sans);
+  font-size: 15px;
+  line-height: 1.75;
+  border-radius: 0;
+  margin-top: 2.5rem;
+  overflow: hidden;
+}
+
+.evo-parcours,
+.evo-parcours * {
+  box-sizing: border-box;
+}
+
+.evo-parcours p,
+.evo-parcours .step-body,
+.evo-parcours .feature-list li,
+.evo-parcours .icd-name,
+.evo-parcours .dr-sub,
+.evo-parcours .pm-sub {
+  text-align: justify;
+}
+
+.evo-parcours .ep-w {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.evo-parcours .page-header {
+  padding: 2.5rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.evo-parcours .page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      ellipse 50% 60% at 20% 50%,
+      rgba(201, 160, 89, 0.09),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 40% 50% at 85% 30%,
+      rgba(26, 111, 212, 0.08),
+      transparent
+    );
+}
+.evo-parcours .ph-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+      rgba(201, 160, 89, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(201, 160, 89, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.evo-parcours .ph-inner {
+  position: relative;
+  z-index: 2;
+}
+.evo-parcours .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.evo-parcours .ey-line {
+  width: 22px;
+  height: 1.5px;
+  background: var(--ep-gold);
+}
+.evo-parcours .ey-txt {
+  font-family: var(--ep-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ep-gold);
+}
+.evo-parcours .ep-h1 {
+  font-family: var(--ep-serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ep-w);
+  margin-bottom: 10px;
+}
+.evo-parcours .ep-h1 em {
+  font-style: normal;
+  color: var(--ep-gold);
+}
+.evo-parcours .lead {
+  font-size: 1rem;
+  color: var(--ep-w6);
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+.evo-parcours .ussd-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ep-gt);
+  border: 1.5px solid var(--ep-gb);
+  border-radius: 8px;
+  padding: 10px 18px;
+}
+.evo-parcours .uh-code {
+  font-family: var(--ep-mono);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ep-gold);
+}
+.evo-parcours .uh-sep {
+  width: 1px;
+  height: 22px;
+  background: var(--ep-gb);
+}
+.evo-parcours .uh-label {
+  font-family: var(--ep-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.evo-parcours .step-section {
+  padding: 2.75rem 0;
+  border-top: 1px solid var(--ep-rule);
+}
+.evo-parcours .step-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.evo-parcours .step-inner.reverse .step-copy {
+  order: 2;
+}
+.evo-parcours .step-inner.reverse .visual-card {
+  order: 1;
+}
+.evo-parcours .step-num-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.evo-parcours .step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ep-mono);
+  font-size: 15px;
+  font-weight: 800;
+  flex-shrink: 0;
+  border: 1.5px solid;
+}
+.evo-parcours .sn1 {
+  background: var(--ep-gt);
+  border-color: var(--ep-gb);
+  color: var(--ep-gold);
+}
+.evo-parcours .sn2 {
+  background: var(--ep-at);
+  border-color: var(--ep-ab);
+  color: #5b9ef5;
+}
+.evo-parcours .sn3 {
+  background: var(--ep-nt);
+  border-color: var(--ep-nb);
+  color: #34d399;
+}
+.evo-parcours .sn4 {
+  background: var(--ep-vt);
+  border-color: var(--ep-vb);
+  color: #a78bfa;
+}
+.evo-parcours .step-tag {
+  font-family: var(--ep-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.evo-parcours .st1 {
+  color: var(--ep-gold);
+}
+.evo-parcours .st2 {
+  color: #5b9ef5;
+}
+.evo-parcours .st3 {
+  color: #34d399;
+}
+.evo-parcours .st4 {
+  color: #a78bfa;
+}
+.evo-parcours .ep-h2 {
+  font-family: var(--ep-serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ep-w);
+  margin-bottom: 10px;
+}
+.evo-parcours .ep-h2 em {
+  font-style: normal;
+}
+.evo-parcours .h2-1 em {
+  color: var(--ep-gold);
+}
+.evo-parcours .h2-2 em {
+  color: #5b9ef5;
+}
+.evo-parcours .h2-3 em {
+  color: #34d399;
+}
+.evo-parcours .h2-4 em {
+  color: #a78bfa;
+}
+.evo-parcours .step-body {
+  font-size: 14px;
+  color: var(--ep-w6);
+  line-height: 1.78;
+  margin-bottom: 16px;
+}
+.evo-parcours .step-body strong {
+  color: var(--ep-w);
+  font-weight: 600;
+}
+.evo-parcours .feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+.evo-parcours .feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ep-w6);
+  line-height: 1.55;
+}
+.evo-parcours .fl-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.evo-parcours .fd1 {
+  background: var(--ep-gold);
+}
+.evo-parcours .fd2 {
+  background: #5b9ef5;
+}
+.evo-parcours .fd3 {
+  background: #34d399;
+}
+.evo-parcours .fd4 {
+  background: #a78bfa;
+}
+.evo-parcours .feature-list li strong {
+  color: var(--ep-w);
+}
+
+.evo-parcours .visual-card {
+  border-radius: 14px;
+  padding: 24px;
+  border: 1.5px solid;
+  position: relative;
+  overflow: hidden;
+}
+.evo-parcours .vc1 {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.evo-parcours .vc2 {
+  background: var(--ep-at);
+  border-color: var(--ep-ab);
+}
+.evo-parcours .vc3 {
+  background: var(--ep-nt);
+  border-color: var(--ep-nb);
+}
+.evo-parcours .vc4 {
+  background: var(--ep-vt);
+  border-color: var(--ep-vb);
+}
+.evo-parcours .vc-label {
+  font-family: var(--ep-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.evo-parcours .vc2 .vc-label {
+  color: #5b9ef5;
+}
+.evo-parcours .vc3 .vc-label {
+  color: #34d399;
+}
+.evo-parcours .vc4 .vc-label {
+  color: #a78bfa;
+}
+
+/* Carte IDNS luxe */
+.evo-parcours .lx-card {
+  width: 100%;
+  max-width: 380px;
+  height: 240px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #1a1208 0%,
+    #2d1f08 30%,
+    #0d0d0d 60%,
+    #1a1208 100%
+  );
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 160, 89, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  margin: 0 auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.evo-parcours .lx-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 36px 72px rgba(0, 0, 0, 0.7),
+    0 0 0 1.5px rgba(201, 160, 89, 0.45);
+}
+.evo-parcours .lx-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(201, 160, 89, 1) 0px,
+    rgba(201, 160, 89, 1) 0.5px,
+    transparent 0.5px,
+    transparent 18px
+  );
+}
+.evo-parcours .lx-glow-tl {
+  position: absolute;
+  top: -60px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 160, 89, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.evo-parcours .lx-edge-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 160, 89, 0.5) 30%,
+    rgba(232, 201, 122, 0.8) 50%,
+    rgba(201, 160, 89, 0.5) 70%,
+    transparent
+  );
+}
+.evo-parcours .lx-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.evo-parcours .lx-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.evo-parcours .lx-brand-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c9a059;
+}
+.evo-parcours .lx-brand-sub {
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  margin-top: 2px;
+}
+.evo-parcours .lx-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+.evo-parcours .lx-circle-l {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(201, 160, 89, 0.85);
+}
+.evo-parcours .lx-circle-r {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(180, 30, 30, 0.85);
+  margin-left: -14px;
+  mix-blend-mode: screen;
+}
+.evo-parcours .lx-chip-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.evo-parcours .lx-chip {
+  width: 38px;
+  height: 30px;
+  border-radius: 5px;
+  background: linear-gradient(
+    135deg,
+    #c9a059 0%,
+    #e8c97a 40%,
+    #a07830 70%,
+    #c9a059 100%
+  );
+  position: relative;
+}
+.evo-parcours .lx-idns-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  margin-bottom: 3px;
+}
+.evo-parcours .lx-idns-num {
+  font-family: var(--ep-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #e8c97a;
+}
+.evo-parcours .lx-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.evo-parcours .lx-holder-label {
+  font-size: 7.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  margin-bottom: 2px;
+}
+.evo-parcours .lx-holder-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+.evo-parcours .lx-holder-reg {
+  font-size: 7px;
+  color: rgba(201, 160, 89, 0.5);
+  margin-top: 2px;
+}
+.evo-parcours .lx-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.evo-parcours .lx-valid-label {
+  font-size: 7.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+}
+.evo-parcours .lx-valid-date {
+  font-family: var(--ep-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+.evo-parcours .lx-status {
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: rgba(10, 138, 68, 0.2);
+  border: 1px solid rgba(10, 138, 68, 0.4);
+  color: #34d399;
+}
+.evo-parcours .lx-caption {
+  text-align: center;
+  font-family: var(--ep-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(201, 160, 89, 0.45);
+  margin-top: 12px;
+}
+
+/* Voucher ticket */
+.evo-parcours .voucher-ticket {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+}
+.evo-parcours .vt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.evo-parcours .vt-brand {
+  font-family: var(--ep-mono);
+  font-size: 10px;
+  font-weight: 800;
+  color: #5b9ef5;
+  letter-spacing: 0.08em;
+}
+.evo-parcours .vt-status {
+  font-family: var(--ep-mono);
+  font-size: 8px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: var(--ep-nt);
+  border: 1px solid var(--ep-nb);
+  color: #34d399;
+}
+.evo-parcours .vt-amount {
+  font-family: var(--ep-serif);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ep-w);
+  margin-bottom: 4px;
+}
+.evo-parcours .vt-rate {
+  font-family: var(--ep-mono);
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.35);
+}
+.evo-parcours .vt-sep {
+  border: none;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  margin: 12px 0;
+}
+.evo-parcours .vt-meta {
+  display: flex;
+  justify-content: space-between;
+}
+.evo-parcours .vtm {
+  text-align: center;
+}
+.evo-parcours .vtm-l {
+  font-family: var(--ep-mono);
+  font-size: 7.5px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.evo-parcours .vtm-v {
+  font-family: var(--ep-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ep-w);
+}
+.evo-parcours .purchase-methods {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.evo-parcours .pm {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 10px;
+  text-align: center;
+}
+.evo-parcours .pm-icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.evo-parcours .pm-label {
+  font-family: var(--ep-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  color: var(--ep-w);
+}
+.evo-parcours .pm-sub {
+  font-size: 10px;
+  color: var(--ep-w3);
+  margin-top: 2px;
+  text-align: center;
+}
+
+.evo-parcours .icd-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+.evo-parcours .icd-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 9px 12px;
+}
+.evo-parcours .icd-code {
+  font-family: var(--ep-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: #34d399;
+  width: 52px;
+  flex-shrink: 0;
+}
+.evo-parcours .icd-name {
+  font-size: 12px;
+  color: var(--ep-w6);
+  text-align: left;
+}
+.evo-parcours .icd-price {
+  font-family: var(--ep-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ep-w);
+  margin-left: auto;
+  white-space: nowrap;
+}
+.evo-parcours .equity-bar {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.evo-parcours .eb-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--ep-mono);
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.evo-parcours .eb-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  flex-shrink: 0;
+}
+.evo-parcours .equity-note {
+  margin-top: 10px;
+  font-size: 11.5px;
+  color: var(--ep-w3);
+  line-height: 1.55;
+  border-top: 1px solid rgba(10, 138, 68, 0.2);
+  padding-top: 10px;
+  text-align: center;
+}
+
+.evo-parcours .burn-panel {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.evo-parcours .burn-title {
+  font-family: var(--ep-mono);
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.evo-parcours .burn-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.evo-parcours .burn-text {
+  flex: 1;
+  min-width: 0;
+}
+.evo-parcours .burn-icon {
+  font-size: 18px;
+}
+.evo-parcours .burn-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ep-w);
+}
+.evo-parcours .burn-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.evo-parcours .burn-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(167, 139, 250, 0.13);
+  border: 1.5px solid #a78bfa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #a78bfa;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.evo-parcours .burn-connector {
+  margin-left: 24px;
+  width: 1px;
+  height: 12px;
+  background: rgba(167, 139, 250, 0.3);
+}
+.evo-parcours .ledger-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--ep-at);
+  border: 1px solid var(--ep-ab);
+  border-radius: 7px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.45;
+}
+.evo-parcours .ledger-note strong {
+  color: #5b9ef5;
+}
+
+.evo-parcours .schema-section {
+  padding: 3rem 0 2.5rem;
+  border-top: 1px solid var(--ep-rule);
+}
+.evo-parcours .schema-title {
+  font-family: var(--ep-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--ep-w);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.evo-parcours .schema-title em {
+  font-style: normal;
+  color: var(--ep-gold);
+}
+.evo-parcours .schema-sub {
+  font-size: 14px;
+  color: var(--ep-w6);
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.evo-parcours .schema-wrap {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--ep-rule);
+  border-radius: 16px;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+.evo-parcours .schema-wrap svg {
+  width: 100%;
+  max-width: 880px;
+  display: block;
+  margin: 0 auto;
+  min-width: 640px;
+}
+
+.evo-parcours .page-footer {
+  border-top: 1px solid var(--ep-rule);
+  padding: 1.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.evo-parcours .pf-reg {
+  font-family: var(--ep-mono);
+  font-size: 8px;
+  color: var(--ep-w3);
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+}
+.evo-parcours .pf-azure {
+  font-family: var(--ep-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: #5b9ef5;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.evo-parcours .pf-azure::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--ep-azure);
+}
+
+@media (max-width: 760px) {
+  .evo-parcours .step-inner {
+    grid-template-columns: 1fr;
+  }
+  .evo-parcours .step-inner.reverse .step-copy,
+  .evo-parcours .step-inner.reverse .visual-card {
+    order: unset;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evo-parcours .lx-card,
+  .evo-parcours .lx-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
