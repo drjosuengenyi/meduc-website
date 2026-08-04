@@ -1376,6 +1376,13 @@ export default function HomePage() {
           </div>
           <div className="ft-col">
             <div className="ft-col-title">Contact</div>
+            <div className="fr" style={{ marginBottom: "0.35rem" }}>
+              Dr. Ngenyibungi — COO &amp; Founder
+            </div>
+            <div className="en" style={{ marginBottom: "0.35rem" }}>
+              Dr. Ngenyibungi — COO &amp; Founder
+            </div>
+            <a href="mailto:drjosue@meduc.tech">drjosue@meduc.tech</a>
             <a href="mailto:contact@meduc.tech">contact@meduc.tech</a>
             <a href="https://meduc.tech">meduc.tech</a>
             <a href="tel:*707%23">USSD *707#</a>

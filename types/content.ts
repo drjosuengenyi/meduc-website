@@ -5,6 +5,7 @@ export interface TeamMember {
   bio: string;
   image: string;
   imageAlt: string;
+  email?: string;
 }
 
 export interface EquipeContent {

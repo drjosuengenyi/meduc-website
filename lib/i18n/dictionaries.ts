@@ -20,6 +20,10 @@ export type Dictionary = {
     navAria: string;
     rights: string;
     techNote: string;
+    leadership: string;
+    founderName: string;
+    founderRole: string;
+    founderEmail: string;
   };
   about: {
     h1: string;
@@ -185,6 +189,10 @@ const fr: Dictionary = {
     navAria: "Liens de pied de page",
     rights: "MEDUC GM. Tous droits réservés.",
     techNote: "Export statique · Azure Static Web Apps",
+    leadership: "Direction",
+    founderName: "Dr. Ngenyibungi",
+    founderRole: "COO & Founder",
+    founderEmail: "drjosue@meduc.tech",
   },
   about: {
     h1: "À propos de nous",
@@ -263,16 +271,22 @@ const fr: Dictionary = {
       "Des dirigeants engagés pour élargir l'accès aux soins et à l'éducation sanitaire.",
     aria: "Membres de l'équipe",
     members: {
-      "dg-01": {
-        role: "Directrice générale",
-        bio: "Médecin de santé publique, elle oriente la stratégie institutionnelle de MEDUC GM et veille à l'alignement des programmes avec les besoins des communautés.",
-        imageAlt: "Portrait de Dr. Amina Okoro, Directrice générale de MEDUC GM",
-      },
-      "ops-02": {
-        role: "Directeur des opérations",
-        bio: "Spécialiste de la logistique sanitaire, il pilote le déploiement terrain et la qualité opérationnelle des dispositifs e-voucher.",
+      "founder-01": {
+        role: "COO & Founder",
+        bio: "Fondateur et Chief Operating Officer de Meduc GM. Il conçoit et pilote MeducAHT — l'infrastructure financière de santé qui relie patients, établissements et État via USSD *707#, pour un accès équitable aux soins ICD-10 en RDC.",
         imageAlt:
-          "Portrait de Jean-Baptiste Nguema, Directeur des opérations de MEDUC GM",
+          "Portrait de Dr. Ngenyibungi, COO and Founder de MEDUC GM",
+      },
+      "commercial-01": {
+        role: "Directeur commercial",
+        bio: "Directeur commercial de Meduc GM. Il développe les partenariats commerciaux, le réseau d'établissements et la croissance de MeducAHT auprès des acteurs de santé, des opérateurs et des institutions en RDC.",
+        imageAlt:
+          "Portrait de Jeremie Tuambilangane, Directeur commercial de MEDUC GM",
+      },
+      "dg-01": {
+        role: "DG MEDUC RDC",
+        bio: "Directrice générale de Meduc RDC. Elle pilote les opérations nationales, la coordination avec les autorités sanitaires et le déploiement de MeducAHT sur le territoire congolais.",
+        imageAlt: "Portrait de Aminata Mushiya, DG MEDUC RDC",
       },
       "part-03": {
         role: "Directrice des partenariats",
@@ -578,6 +592,10 @@ const en: Dictionary = {
     navAria: "Footer links",
     rights: "MEDUC GM. All rights reserved.",
     techNote: "Static export · Azure Static Web Apps",
+    leadership: "Leadership",
+    founderName: "Dr. Ngenyibungi",
+    founderRole: "COO & Founder",
+    founderEmail: "drjosue@meduc.tech",
   },
   about: {
     h1: "About us",
@@ -654,15 +672,21 @@ const en: Dictionary = {
       "Leaders committed to expanding access to care and health education.",
     aria: "Team members",
     members: {
-      "dg-01": {
-        role: "Chief Executive Officer",
-        bio: "A public health physician, she steers MEDUC GM's institutional strategy and ensures programmes align with community needs.",
-        imageAlt: "Portrait of Dr. Amina Okoro, CEO of MEDUC GM",
+      "founder-01": {
+        role: "COO & Founder",
+        bio: "Founder and Chief Operating Officer of Meduc GM. He designs and steers MeducAHT — the health financing infrastructure that connects patients, facilities and the State via USSD *707#, for equitable ICD-10 care access in the DRC.",
+        imageAlt: "Portrait of Dr. Ngenyibungi, COO and Founder of MEDUC GM",
       },
-      "ops-02": {
-        role: "Chief Operating Officer",
-        bio: "A health logistics specialist, he leads field deployment and operational quality of e-voucher systems.",
-        imageAlt: "Portrait of Jean-Baptiste Nguema, COO of MEDUC GM",
+      "commercial-01": {
+        role: "Commercial Director",
+        bio: "Commercial Director of Meduc GM. He develops commercial partnerships, the provider network and MeducAHT growth with health actors, operators and institutions in the DRC.",
+        imageAlt:
+          "Portrait of Jeremie Tuambilangane, Commercial Director of MEDUC GM",
+      },
+      "dg-01": {
+        role: "DG MEDUC RDC",
+        bio: "Managing Director of Meduc RDC. She leads national operations, coordination with health authorities and MeducAHT deployment across the Congolese territory.",
+        imageAlt: "Portrait of Aminata Mushiya, DG MEDUC RDC",
       },
       "part-03": {
         role: "Director of Partnerships",

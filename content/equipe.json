@@ -3,20 +3,31 @@
   "subtitle": "Des dirigeants engagés pour élargir l'accès aux soins et à l'éducation sanitaire en Afrique.",
   "members": [
     {
-      "id": "dg-01",
-      "name": "Dr. Amina Okoro",
-      "role": "Directrice générale",
-      "bio": "Médecin de santé publique avec plus de quinze ans d'expérience dans le déploiement de programmes d'accès aux soins en Afrique de l'Ouest et centrale.",
-      "image": "/images/equipe/amina-okoro.svg",
-      "imageAlt": "Portrait de Dr. Amina Okoro, Directrice générale de MEDUC"
+      "id": "founder-01",
+      "name": "Dr. Ngenyibungi",
+      "role": "COO & Founder",
+      "bio": "Fondateur et Chief Operating Officer de Meduc GM. Il conçoit et pilote MeducAHT — l'infrastructure financière de santé qui relie patients, établissements et État via USSD *707#, pour un accès équitable aux soins ICD-10 en RDC.",
+      "image": "/images/equipe/dr-ngenyibungi.png",
+      "imageAlt": "Portrait de Dr. Ngenyibungi, COO and Founder de MEDUC GM",
+      "email": "drjosue@meduc.tech"
     },
     {
-      "id": "ops-02",
-      "name": "Jean-Baptiste Nguema",
-      "role": "Directeur des opérations",
-      "bio": "Spécialiste de la logistique sanitaire et de la coordination terrain. Il supervise le déploiement des programmes e-voucher auprès des établissements partenaires.",
-      "image": "/images/equipe/jean-baptiste-nguema.svg",
-      "imageAlt": "Portrait de Jean-Baptiste Nguema, Directeur des opérations"
+      "id": "dg-01",
+      "name": "Aminata Mushiya",
+      "role": "DG MEDUC RDC",
+      "bio": "Directrice générale de Meduc RDC. Elle pilote les opérations nationales, la coordination avec les autorités sanitaires et le déploiement de MeducAHT sur le territoire congolais.",
+      "image": "/images/equipe/aminata-mushiya.png",
+      "imageAlt": "Portrait de Aminata Mushiya, DG MEDUC RDC",
+      "email": "m.aminata@meduc.tech"
+    },
+    {
+      "id": "commercial-01",
+      "name": "Jeremie Tuambilangane",
+      "role": "Directeur commercial",
+      "bio": "Directeur commercial de Meduc GM. Il développe les partenariats commerciaux, le réseau d'établissements et la croissance de MeducAHT auprès des acteurs de santé, des opérateurs et des institutions en RDC.",
+      "image": "/images/equipe/jeremie-tuambilangane.png",
+      "imageAlt": "Portrait de Jeremie Tuambilangane, Directeur commercial de MEDUC GM",
+      "email": "t.jereie@meduc.tech"
     },
     {
       "id": "part-03",

@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border bg-navy text-cream">
-      <div className="container-site section-pad grid gap-10 md:grid-cols-[1.2fr_1fr]">
+      <div className="container-site section-pad grid gap-10 md:grid-cols-[1.1fr_1fr_0.9fr]">
         <div>
           <p className="font-serif text-2xl text-cream">
             MEDUC <span className="text-[#5b9ef5]">GM</span>
@@ -42,6 +42,21 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
+        <div>
+          <p className="font-serif text-xs tracking-[0.18em] text-gold">
+            {t.footer.leadership}
+          </p>
+          <p className="mt-3 font-serif text-lg text-cream">
+            {t.footer.founderName}
+          </p>
+          <p className="mt-1 text-sm text-cream/70">{t.footer.founderRole}</p>
+          <a
+            href={`mailto:${t.footer.founderEmail}`}
+            className="mt-3 inline-block text-sm text-gold no-underline underline-offset-4 hover:underline"
+          >
+            {t.footer.founderEmail}
+          </a>
+        </div>
       </div>
       <div className="border-t border-white/10">
         <div className="container-site flex flex-col gap-2 py-5 text-xs text-cream/55 sm:flex-row sm:items-center sm:justify-between">
