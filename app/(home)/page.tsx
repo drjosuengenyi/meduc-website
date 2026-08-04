@@ -1,11 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import "./home.css";
-
-type Lang = "fr" | "en";
-
-const LANG_STORAGE_KEY = "meduc-lang";
 
 const USSD_FLOW: { fr: string; en: string }[] = [
   {
@@ -125,30 +122,11 @@ function FaqItem({
 }
 
 export default function HomePage() {
-  const [lang, setLang] = useState<Lang>("fr");
+  const { lang, setLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
   const [ussdStep, setUssdStep] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Langue sauvegardée (après hydratation, pour éviter tout décalage SSG/client).
-  useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(LANG_STORAGE_KEY);
-      if (saved === "fr" || saved === "en") setLang(saved);
-    } catch {
-      /* stockage indisponible : on reste en français */
-    }
-  }, []);
-
-  const switchLang = useCallback((next: Lang) => {
-    setLang(next);
-    try {
-      window.localStorage.setItem(LANG_STORAGE_KEY, next);
-    } catch {
-      /* stockage indisponible */
-    }
-  }, []);
 
   // Fond du body en navy profond (#00040F) sur la page d'accueil,
   // pour éviter tout flash clair au sur-défilement ; restauré en quittant.
@@ -268,14 +246,14 @@ export default function HomePage() {
             <button
               type="button"
               className={`btn-lang${lang === "fr" ? " active" : ""}`}
-              onClick={() => switchLang("fr")}
+              onClick={() => setLang("fr")}
             >
               FR
             </button>
             <button
               type="button"
               className={`btn-lang${lang === "en" ? " active" : ""}`}
-              onClick={() => switchLang("en")}
+              onClick={() => setLang("en")}
             >
               EN
             </button>

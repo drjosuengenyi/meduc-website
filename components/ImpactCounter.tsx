@@ -1,22 +1,14 @@
+"use client";
+
 import type { CSSProperties } from "react";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
-type ImpactCounterProps = {
-  currentLabel?: string;
-  currentValue?: number;
-  targetLabel?: string;
-  targetValue?: number;
-  horizon?: string;
-  description?: string;
-};
+export default function ImpactCounter() {
+  const { t } = useLanguage();
+  const impact = t.impact;
+  const currentValue = 38;
+  const targetValue = 112;
 
-export default function ImpactCounter({
-  currentLabel = "Personnes déjà touchées",
-  currentValue = 38,
-  targetLabel = "Ambition d'ici 2030",
-  targetValue = 112,
-  horizon = "d'ici 2030",
-  description = "Notre trajectoire d'impact : élargir l'accès aux programmes de soins et d'éducation sanitaire à l'échelle du continent.",
-}: ImpactCounterProps) {
   return (
     <section
       className="section-pad bg-navy text-cream"
@@ -24,19 +16,21 @@ export default function ImpactCounter({
     >
       <div className="container-site">
         <div className="max-w-2xl">
-          <p className="eyebrow text-gold">Trajectoire 2030</p>
+          <p className="eyebrow text-gold">{impact.eyebrow}</p>
           <h2
             id="impact-heading"
             className="mt-3 text-3xl text-cream md:text-4xl"
           >
-            Notre ambition d&apos;impact
+            {impact.title}
           </h2>
-          <p className="mt-3 text-cream/75">{description}</p>
+          <p className="mt-3 text-cream/75">{impact.description}</p>
         </div>
 
         <div className="mt-12 grid gap-10 sm:grid-cols-[1fr_auto_1fr] sm:items-end">
           <div>
-            <p className="text-sm tracking-wide text-gold">{currentLabel}</p>
+            <p className="text-sm tracking-wide text-gold">
+              {impact.currentLabel}
+            </p>
             <p className="mt-2 flex items-baseline gap-1 font-serif text-5xl text-cream md:text-6xl">
               <span
                 className="impact-count"
@@ -61,7 +55,9 @@ export default function ImpactCounter({
           </p>
 
           <div>
-            <p className="text-sm tracking-wide text-gold">{targetLabel}</p>
+            <p className="text-sm tracking-wide text-gold">
+              {impact.targetLabel}
+            </p>
             <p className="mt-2 flex items-baseline gap-1 font-serif text-5xl text-cream md:text-6xl">
               <span
                 className="impact-count"
@@ -76,7 +72,7 @@ export default function ImpactCounter({
               <span className="sr-only">{targetValue}</span>
               <span className="text-3xl text-gold md:text-4xl">M</span>
             </p>
-            <p className="mt-2 text-sm text-cream/60">{horizon}</p>
+            <p className="mt-2 text-sm text-cream/60">{impact.horizon}</p>
           </div>
         </div>
 
@@ -87,7 +83,7 @@ export default function ImpactCounter({
             aria-valuenow={currentValue}
             aria-valuemin={0}
             aria-valuemax={targetValue}
-            aria-label={`Progression : ${currentValue} millions sur ${targetValue} millions`}
+            aria-label={`${currentValue}M / ${targetValue}M`}
           >
             <div
               className="impact-bar h-full rounded-full bg-gradient-to-r from-gold-deep to-gold"
@@ -99,7 +95,7 @@ export default function ImpactCounter({
             />
           </div>
           <p className="mt-4 font-serif text-xl text-gold-soft md:text-2xl">
-            {currentValue}M / {targetValue}M {horizon}
+            {currentValue}M / {targetValue}M {impact.horizon}
           </p>
         </div>
       </div>

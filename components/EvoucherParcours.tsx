@@ -1,3 +1,7 @@
+"use client";
+
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
+
 function CircuitSchema() {
   return (
     <svg
@@ -154,495 +158,328 @@ function CircuitSchema() {
   );
 }
 
+function StepVisualCard({ index, lang }: { index: number; lang: string }) {
+  const en = lang === "en";
+
+  if (index === 0) {
+    return (
+      <div className="visual-card vc1">
+        <div className="lx-card">
+          <div className="lx-lines" aria-hidden />
+          <div className="lx-glow-tl" aria-hidden />
+          <div className="lx-edge-top" aria-hidden />
+          <div className="lx-inner">
+            <div className="lx-top">
+              <div>
+                <div className="lx-brand-name">MeducAHT</div>
+                <div className="lx-brand-sub">Africa Health e-Voucher</div>
+              </div>
+              <div className="lx-logo-wrap" aria-hidden>
+                <div className="lx-circle-l" />
+                <div className="lx-circle-r" />
+              </div>
+            </div>
+            <div>
+              <div className="lx-chip-row">
+                <div className="lx-chip" aria-hidden />
+              </div>
+              <div className="lx-idns-label">
+                {en
+                  ? "National Health Identifier"
+                  : "Identifiant National de Santé"}
+              </div>
+              <div className="lx-idns-num">AHT7 K3MN 9PQ2 RX5F</div>
+            </div>
+            <div className="lx-bottom">
+              <div>
+                <div className="lx-holder-label">
+                  {en ? "Holder" : "Titulaire"}
+                </div>
+                <div className="lx-holder-name">
+                  {en ? "IDNS Holder" : "Titulaire IDNS"}
+                </div>
+                <div className="lx-holder-reg">
+                  Meduc GM · RCCM CD/KNG/RCCM/25-B-01820
+                </div>
+              </div>
+              <div className="lx-right">
+                <div className="lx-valid-label">
+                  {en ? "Valid until" : "Valide jusqu'au"}
+                </div>
+                <div className="lx-valid-date">12/30</div>
+                <div className="lx-status">
+                  {en ? "Active · 26 Provinces" : "Actif · 26 Provinces"}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="lx-caption">
+          IDNS — {en ? "Health ID & e-Voucher Wallet" : "ID Santé & Wallet e-Voucher"}
+        </div>
+      </div>
+    );
+  }
+
+  if (index === 1) {
+    return (
+      <div className="visual-card vc2">
+        <div className="vc-label">
+          {en ? "AHT e-Voucher — Example" : "E-Voucher AHT — Exemple"}
+        </div>
+        <div className="voucher-ticket">
+          <div className="vt-header">
+            <span className="vt-brand">AHT e-VOUCHER</span>
+            <span className="vt-status">{en ? "Validated" : "Validé"}</span>
+          </div>
+          <div className="vt-amount">1 AHT</div>
+          <div className="vt-rate">
+            3 640 CDF · {en ? "Official BCC rate" : "Taux BCC officiel"}
+          </div>
+          <hr className="vt-sep" />
+          <div className="vt-meta">
+            <div className="vtm">
+              <div className="vtm-l">{en ? "Usage" : "Utilisation"}</div>
+              <div className="vtm-v">Soins ICD-10</div>
+            </div>
+            <div className="vtm">
+              <div className="vtm-l">{en ? "Zone" : "Zone"}</div>
+              <div className="vtm-v">26 Provinces</div>
+            </div>
+            <div className="vtm">
+              <div className="vtm-l">{en ? "Status" : "Statut"}</div>
+              <div className="vtm-v">{en ? "Active" : "Actif"}</div>
+            </div>
+          </div>
+        </div>
+        <div className="purchase-methods">
+          <div className="pm">
+            <div className="pm-icon" aria-hidden>
+              💵
+            </div>
+            <div className="pm-label">Cash</div>
+            <div className="pm-sub">
+              {en ? "Via field DS agent" : "Via agent VD terrain"}
+            </div>
+          </div>
+          <div className="pm">
+            <div className="pm-icon" aria-hidden>
+              🏦
+            </div>
+            <div className="pm-label">{en ? "Bank" : "Banque"}</div>
+            <div className="pm-sub">
+              {en ? "Bank transfer" : "Virement bancaire"}
+            </div>
+          </div>
+          <div className="pm">
+            <div className="pm-icon" aria-hidden>
+              📱
+            </div>
+            <div className="pm-label">Mobile Money</div>
+            <div className="pm-sub">Airtel · Orange · Vodacom</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (index === 2) {
+    return (
+      <div className="visual-card vc3">
+        <div className="vc-label">
+          {en
+            ? "ICD-10 acts — Official tariff"
+            : "Actes ICD-10 — Barème officiel"}
+        </div>
+        <div className="icd-grid">
+          {[
+            ["J06.9", "Infection voies respiratoires", "1 AHT"],
+            ["A09", "Diarrhée et gastro-entérite", "1 AHT"],
+            ["B54", "Paludisme, non précisé", "2 AHT"],
+            ["Z00.0", "Examen médical général", "1 AHT"],
+          ].map(([code, name, price]) => (
+            <div className="icd-item" key={code}>
+              <div className="icd-code">{code}</div>
+              <div className="icd-name">{name}</div>
+              <div className="icd-price">{price}</div>
+            </div>
+          ))}
+        </div>
+        <div className="equity-bar">
+          {["Kinshasa", "Bandundu", "Kasaï", "+ 23 provinces"].map((z) => (
+            <div className="eb-item" key={z}>
+              <div className="eb-dot" />
+              {z}
+            </div>
+          ))}
+        </div>
+        <div className="equity-note">
+          {en
+            ? "Uniform prices under the official tariff — identical across all 26 provinces"
+            : "Prix uniformés selon le barème officiel — identiques dans les 26 provinces"}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="visual-card vc4">
+      <div className="vc-label">
+        {en ? "BURN Distribution — Automatic" : "Distribution BURN — Automatique"}
+      </div>
+      <div className="burn-panel">
+        <div className="burn-title">
+          {en
+            ? "1 AHT e-voucher validated → 3 simultaneous flows"
+            : "1 AHT e-voucher validé → 3 flux simultanés"}
+        </div>
+        <div className="burn-row">
+          <div className="burn-icon" aria-hidden>
+            🏥
+          </div>
+          <div className="burn-text">
+            <div className="burn-name">
+              {en ? "Care provider" : "Prestataire de soins"}
+            </div>
+            <div className="burn-sub">
+              {en ? "Guaranteed payment — same day" : "Paiement garanti — jour même"}
+            </div>
+          </div>
+          <div className="burn-dot">●</div>
+        </div>
+        <div className="burn-connector" />
+        <div className="burn-row">
+          <div className="burn-icon" aria-hidden>
+            🏛️
+          </div>
+          <div className="burn-text">
+            <div className="burn-name">
+              {en ? "DGI — Congolese State" : "DGI — État congolais"}
+            </div>
+            <div className="burn-sub">
+              {en
+                ? "Automatic fiscal contribution"
+                : "Contribution fiscale automatique"}
+            </div>
+          </div>
+          <div className="burn-dot">●</div>
+        </div>
+        <div className="burn-connector" />
+        <div className="burn-row">
+          <div className="burn-icon" aria-hidden>
+            ⚙️
+          </div>
+          <div className="burn-text">
+            <div className="burn-name">Meduc GM</div>
+            <div className="burn-sub">
+              {en ? "Platform sustainability" : "Pérennité de la plateforme"}
+            </div>
+          </div>
+          <div className="burn-dot">●</div>
+        </div>
+      </div>
+      <div className="ledger-note">
+        <span aria-hidden>🔒</span>
+        <div>
+          {en ? "Recorded on " : "Enregistré sur "}
+          <strong>Azure Confidential Ledger</strong>
+          <br />
+          {en
+            ? "Immutable · Real-time auditable · Tamper-proof"
+            : "Immuable · Auditable en temps réel · Infalsifiable"}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function EvoucherParcours() {
+  const { t, lang } = useLanguage();
+  const p = t.evoucherParcours;
+
+  const stepClasses = [
+    { sn: "sn1", st: "st1", h2: "h2-1", fd: "fd1" },
+    { sn: "sn2", st: "st2", h2: "h2-2", fd: "fd2" },
+    { sn: "sn3", st: "st3", h2: "h2-3", fd: "fd3" },
+    { sn: "sn4", st: "st4", h2: "h2-4", fd: "fd4" },
+  ];
+
   return (
     <div className="evo-parcours rounded-2xl border border-navy/20">
-      {/* Intro */}
       <div className="page-header">
         <div className="ph-grid" aria-hidden />
         <div className="ep-w ph-inner">
           <div className="eyebrow">
             <div className="ey-line" />
-            <div className="ey-txt">Meduc GM — MeducAHT — Guide utilisateur</div>
+            <div className="ey-txt">{p.eyebrow}</div>
           </div>
           <h3 className="ep-h1">
-            Comment fonctionne
+            {p.title}
             <br />
-            <em>l&apos;e-Voucher AHT ?</em>
+            <em>{p.titleEm}</em>
           </h3>
-          <p className="lead">
-            En 4 étapes simples, tout Congolais avec une carte SIM accède aux
-            soins de santé ICD-10 — sans banque, sans smartphone, sans
-            intermédiaire.
-          </p>
+          <p className="lead">{p.lead}</p>
           <div className="ussd-hero">
             <span className="uh-code">*707#</span>
             <div className="uh-sep" />
-            <span className="uh-label">
-              Composer sur n&apos;importe quel téléphone
-            </span>
+            <span className="uh-label">{p.ussdLabel}</span>
           </div>
         </div>
       </div>
 
-      {/* Étape 1 */}
-      <div className="step-section">
-        <div className="ep-w">
-          <div className="step-inner">
-            <div className="step-copy">
-              <div className="step-num-wrap">
-                <div className="step-num sn1">01</div>
-                <span className="step-tag st1">Étape 1 — Identité</span>
-              </div>
-              <h3 className="ep-h2 h2-1">
-                Créez votre
-                <br />
-                <em>Identifiant National de Santé</em>
-              </h3>
-              <p className="step-body">
-                L&apos;<strong>IDNS (Identifiant National de Santé)</strong> est
-                votre numéro unique sur la plateforme MeducAHT. En composant{" "}
-                <strong>*707#</strong>, vous créez en quelques secondes un
-                identifiant personnel qui joue un <strong>double rôle</strong> :
-                celui d&apos;une <strong>identité de santé numérique</strong> et
-                celui d&apos;un <strong>wallet de e-vouchers</strong>. Une seule
-                création, une seule fois, valable dans les 26 provinces de la
-                RDC.
-              </p>
-              <ul className="feature-list">
-                <li>
-                  <div className="fl-dot fd1" />
-                  <div>
-                    <strong>Sans document physique requis</strong> — la
-                    vérification se fait via votre numéro de téléphone SIM
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd1" />
-                  <div>
-                    <strong>Numéro unique et irrévocable</strong> — 12 caractères
-                    alphanumériques, format sécurisé
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd1" />
-                  <div>
-                    <strong>Double fonction</strong> — ID de santé + wallet
-                    e-voucher dans un seul identifiant
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd1" />
-                  <div>
-                    <strong>Valable dans tous les points de soins</strong>{" "}
-                    partenaires MeducAHT en RDC
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="visual-card vc1">
-              <div className="lx-card">
-                <div className="lx-lines" aria-hidden />
-                <div className="lx-glow-tl" aria-hidden />
-                <div className="lx-edge-top" aria-hidden />
-                <div className="lx-inner">
-                  <div className="lx-top">
-                    <div>
-                      <div className="lx-brand-name">MeducAHT</div>
-                      <div className="lx-brand-sub">
-                        Africa Health e-Voucher
-                      </div>
+      {p.steps.map((step, i) => {
+        const cls = stepClasses[i];
+        const reverse = i === 1 || i === 3;
+
+        return (
+          <div className="step-section" key={cls.sn}>
+            <div className="ep-w">
+              <div className={`step-inner${reverse ? " reverse" : ""}`}>
+                <div className="step-copy">
+                  <div className="step-num-wrap">
+                    <div className={`step-num ${cls.sn}`}>
+                      {String(i + 1).padStart(2, "0")}
                     </div>
-                    <div className="lx-logo-wrap" aria-hidden>
-                      <div className="lx-circle-l" />
-                      <div className="lx-circle-r" />
-                    </div>
+                    <span className={`step-tag ${cls.st}`}>{step.tag}</span>
                   </div>
-                  <div>
-                    <div className="lx-chip-row">
-                      <div className="lx-chip" aria-hidden />
-                    </div>
-                    <div className="lx-idns-label">
-                      Identifiant National de Santé
-                    </div>
-                    <div className="lx-idns-num">AHT7 K3MN 9PQ2 RX5F</div>
-                  </div>
-                  <div className="lx-bottom">
-                    <div>
-                      <div className="lx-holder-label">Titulaire</div>
-                      <div className="lx-holder-name">Titulaire IDNS</div>
-                      <div className="lx-holder-reg">
-                        Meduc GM · RCCM CD/KNG/RCCM/25-B-01820
-                      </div>
-                    </div>
-                    <div className="lx-right">
-                      <div className="lx-valid-label">Valide jusqu&apos;au</div>
-                      <div className="lx-valid-date">12/30</div>
-                      <div className="lx-status">Actif · 26 Provinces</div>
-                    </div>
-                  </div>
+                  <h3 className={`ep-h2 ${cls.h2}`}>
+                    {step.title}
+                    <br />
+                    <em>{step.titleEm}</em>
+                  </h3>
+                  <p className="step-body">{step.body}</p>
+                  <ul className="feature-list">
+                    {step.features.map((feature) => (
+                      <li key={feature.strong}>
+                        <div className={`fl-dot ${cls.fd}`} />
+                        <div>
+                          <strong>{feature.strong}</strong>
+                          {feature.rest}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-              <div className="lx-caption">
-                IDNS — ID Santé &amp; Wallet e-Voucher
+                <StepVisualCard index={i} lang={lang} />
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
 
-      {/* Étape 2 */}
-      <div className="step-section">
-        <div className="ep-w">
-          <div className="step-inner reverse">
-            <div className="step-copy">
-              <div className="step-num-wrap">
-                <div className="step-num sn2">02</div>
-                <span className="step-tag st2">Étape 2 — Achat</span>
-              </div>
-              <h3 className="ep-h2 h2-2">
-                Achetez votre
-                <br />
-                <em>e-Voucher AHT</em>
-              </h3>
-              <p className="step-body">
-                Une fois votre IDNS créé, vous rechargez votre wallet en
-                achetant des e-vouchers AHT via{" "}
-                <strong>trois modes de paiement</strong> : en{" "}
-                <strong>espèces</strong> auprès d&apos;un agent Vendeur Direct
-                terrain, par <strong>virement bancaire</strong>, ou via{" "}
-                <strong>Mobile Money</strong> (Airtel Money, Orange Money,
-                Vodacom M-Pesa). Le montant est crédité instantanément en
-                e-vouchers AHT dans votre wallet IDNS, ancré au taux officiel de
-                la Banque Centrale du Congo.
-              </p>
-              <ul className="feature-list">
-                <li>
-                  <div className="fl-dot fd2" />
-                  <div>
-                    <strong>Cash</strong> — via un agent Vendeur Direct MeducAHT
-                    sur le terrain
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd2" />
-                  <div>
-                    <strong>Banque</strong> — virement vers le compte Meduc GM,
-                    crédit IDNS instantané
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd2" />
-                  <div>
-                    <strong>Via *707# USSD</strong> — sur tout téléphone, même
-                    sans Internet
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd2" />
-                  <div>
-                    <strong>Via l&apos;application mobile</strong> — iOS et
-                    Android
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd2" />
-                  <div>
-                    <strong>Mobile Money accepté</strong> — Airtel Money, Orange
-                    Money, Vodacom M-Pesa
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd2" />
-                  <div>
-                    <strong>Créditage instantané</strong> — e-vouchers
-                    disponibles immédiatement dans le wallet
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="visual-card vc2">
-              <div className="vc-label">E-Voucher AHT — Exemple</div>
-              <div className="voucher-ticket">
-                <div className="vt-header">
-                  <span className="vt-brand">AHT e-VOUCHER</span>
-                  <span className="vt-status">Validé</span>
-                </div>
-                <div className="vt-amount">1 AHT</div>
-                <div className="vt-rate">
-                  3 640 CDF · Taux BCC officiel
-                </div>
-                <hr className="vt-sep" />
-                <div className="vt-meta">
-                  <div className="vtm">
-                    <div className="vtm-l">Utilisation</div>
-                    <div className="vtm-v">Soins ICD-10</div>
-                  </div>
-                  <div className="vtm">
-                    <div className="vtm-l">Zone</div>
-                    <div className="vtm-v">26 Provinces</div>
-                  </div>
-                  <div className="vtm">
-                    <div className="vtm-l">Statut</div>
-                    <div className="vtm-v">Actif</div>
-                  </div>
-                </div>
-              </div>
-              <div className="purchase-methods">
-                <div className="pm">
-                  <div className="pm-icon" aria-hidden>
-                    💵
-                  </div>
-                  <div className="pm-label">Cash</div>
-                  <div className="pm-sub">Via agent VD terrain</div>
-                </div>
-                <div className="pm">
-                  <div className="pm-icon" aria-hidden>
-                    🏦
-                  </div>
-                  <div className="pm-label">Banque</div>
-                  <div className="pm-sub">Virement bancaire</div>
-                </div>
-                <div className="pm">
-                  <div className="pm-icon" aria-hidden>
-                    📱
-                  </div>
-                  <div className="pm-label">Mobile Money</div>
-                  <div className="pm-sub">Airtel · Orange · Vodacom</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Étape 3 */}
-      <div className="step-section">
-        <div className="ep-w">
-          <div className="step-inner">
-            <div className="step-copy">
-              <div className="step-num-wrap">
-                <div className="step-num sn3">03</div>
-                <span className="step-tag st3">Étape 3 — Soins</span>
-              </div>
-              <h3 className="ep-h2 h2-3">
-                Accédez aux soins
-                <br />
-                <em>de façon équitable</em>
-              </h3>
-              <p className="step-body">
-                Au point de soins partenaire MeducAHT, vous présentez votre
-                IDNS. Le prestataire identifie l&apos;acte médical par son{" "}
-                <strong>code ICD-10</strong> et son prix fixé selon le barème
-                officiel de l&apos;autorité de régulation des prix de santé en
-                RDC. Vous confirmez le paiement par <strong>OTP SMS</strong>.{" "}
-                <strong>
-                  Le même acte, le même prix, pour chaque Congolais — à Kinshasa
-                  comme en zone rurale.
-                </strong>{" "}
-                Zéro négociation. Zéro discrimination tarifaire.
-              </p>
-              <ul className="feature-list">
-                <li>
-                  <div className="fl-dot fd3" />
-                  <div>
-                    <strong>Barème officiel RDC</strong> — prix fixés par
-                    l&apos;autorité de régulation, traduits en ICD-10
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd3" />
-                  <div>
-                    <strong>Équité tarifaire totale</strong> — même code ICD-10,
-                    même prix partout en RDC
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd3" />
-                  <div>
-                    <strong>Validation OTP SMS</strong> — sécurité du paiement
-                    en temps réel
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd3" />
-                  <div>
-                    <strong>Accessibles en milieu rural</strong> — via USSD
-                    *707# sans Internet
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="visual-card vc3">
-              <div className="vc-label">Actes ICD-10 — Barème officiel</div>
-              <div className="icd-grid">
-                {[
-                  ["J06.9", "Infection voies respiratoires", "1 AHT"],
-                  ["A09", "Diarrhée et gastro-entérite", "1 AHT"],
-                  ["B54", "Paludisme, non précisé", "2 AHT"],
-                  ["Z00.0", "Examen médical général", "1 AHT"],
-                ].map(([code, name, price]) => (
-                  <div className="icd-item" key={code}>
-                    <div className="icd-code">{code}</div>
-                    <div className="icd-name">{name}</div>
-                    <div className="icd-price">{price}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="equity-bar">
-                {["Kinshasa", "Bandundu", "Kasaï", "+ 23 provinces"].map(
-                  (z) => (
-                    <div className="eb-item" key={z}>
-                      <div className="eb-dot" />
-                      {z}
-                    </div>
-                  )
-                )}
-              </div>
-              <div className="equity-note">
-                Prix uniformés selon le barème officiel — identiques dans les 26
-                provinces
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Étape 4 */}
-      <div className="step-section">
-        <div className="ep-w">
-          <div className="step-inner reverse">
-            <div className="step-copy">
-              <div className="step-num-wrap">
-                <div className="step-num sn4">04</div>
-                <span className="step-tag st4">Étape 4 — Distribution</span>
-              </div>
-              <h3 className="ep-h2 h2-4">
-                Distribution automatique
-                <br />
-                <em>immuable &amp; instantanée</em>
-              </h3>
-              <p className="step-body">
-                Dès que le soin est validé{" "}
-                <strong>au niveau du point de soins</strong>, la plateforme
-                MeducAHT déclenche automatiquement une{" "}
-                <strong>distribution en trois flux simultanés</strong>,
-                enregistrée de manière immuable sur le{" "}
-                <strong>Microsoft Azure Confidential Ledger</strong>. La taxe de
-                l&apos;État est collectée automatiquement auprès de la Direction
-                Générale des Impôts (DGI), la structure de santé est
-                approvisionnée de sa part garantie le jour même, et Meduc GM
-                reçoit sa part pour l&apos;entretien et la pérennité de la
-                plateforme. Aucun intermédiaire humain. Aucun virement manuel.
-                Aucun délai.
-              </p>
-              <ul className="feature-list">
-                <li>
-                  <div className="fl-dot fd4" />
-                  <div>
-                    <strong>Prestataire de soins</strong> — paiement garanti le
-                    jour même, directement sur son compte
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd4" />
-                  <div>
-                    <strong>DGI — contribution fiscale</strong> — automatique,
-                    sans agent supplémentaire
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd4" />
-                  <div>
-                    <strong>Meduc GM</strong> — frais de plateforme pour la
-                    durabilité du service
-                  </div>
-                </li>
-                <li>
-                  <div className="fl-dot fd4" />
-                  <div>
-                    <strong>Azure Confidential Ledger</strong> — enregistrement
-                    immuable, auditable en temps réel
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="visual-card vc4">
-              <div className="vc-label">Distribution BURN — Automatique</div>
-              <div className="burn-panel">
-                <div className="burn-title">
-                  1 AHT e-voucher validé → 3 flux simultanés
-                </div>
-                <div className="burn-row">
-                  <div className="burn-icon" aria-hidden>
-                    🏥
-                  </div>
-                  <div className="burn-text">
-                    <div className="burn-name">Prestataire de soins</div>
-                    <div className="burn-sub">
-                      Paiement garanti — jour même
-                    </div>
-                  </div>
-                  <div className="burn-dot">●</div>
-                </div>
-                <div className="burn-connector" />
-                <div className="burn-row">
-                  <div className="burn-icon" aria-hidden>
-                    🏛️
-                  </div>
-                  <div className="burn-text">
-                    <div className="burn-name">DGI — État congolais</div>
-                    <div className="burn-sub">
-                      Contribution fiscale automatique
-                    </div>
-                  </div>
-                  <div className="burn-dot">●</div>
-                </div>
-                <div className="burn-connector" />
-                <div className="burn-row">
-                  <div className="burn-icon" aria-hidden>
-                    ⚙️
-                  </div>
-                  <div className="burn-text">
-                    <div className="burn-name">Meduc GM</div>
-                    <div className="burn-sub">
-                      Pérennité de la plateforme
-                    </div>
-                  </div>
-                  <div className="burn-dot">●</div>
-                </div>
-              </div>
-              <div className="ledger-note">
-                <span aria-hidden>🔒</span>
-                <div>
-                  Enregistré sur{" "}
-                  <strong>Azure Confidential Ledger</strong>
-                  <br />
-                  Immuable · Auditable en temps réel · Infalsifiable
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Schéma */}
       <div className="schema-section">
         <div className="ep-w">
           <div className="eyebrow" style={{ justifyContent: "center" }}>
             <div className="ey-line" />
-            <div className="ey-txt">Schéma global du circuit AHT</div>
+            <div className="ey-txt">{p.schemaEyebrow}</div>
             <div className="ey-line" />
           </div>
           <h3 className="schema-title">
-            Le circuit complet
+            {p.schemaTitle}
             <br />
-            <em>de l&apos;e-Voucher AHT</em>
+            <em>{p.schemaTitleEm}</em>
           </h3>
-          <p className="schema-sub">
-            De la création de l&apos;IDNS au paiement du prestataire — un
-            système fermé, traçable et immuable
-          </p>
+          <p className="schema-sub">{p.schemaSub}</p>
           <div className="schema-wrap">
             <CircuitSchema />
           </div>
@@ -658,9 +495,7 @@ export default function EvoucherParcours() {
             <br />
             meduc.tech · contact@meduc.tech · USSD *707#
           </div>
-          <div className="pf-azure">
-            Propulsé par Microsoft Azure — South Africa North
-          </div>
+          <div className="pf-azure">{p.powered}</div>
         </div>
       </div>
     </div>

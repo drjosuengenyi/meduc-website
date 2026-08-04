@@ -1,37 +1,23 @@
-const PILLARS = [
-  {
-    title: "Accès aux soins",
-    description:
-      "Des parcours simplifiés pour que les ménages rejoignent plus facilement les établissements de santé partenaires.",
-  },
-  {
-    title: "Éducation sanitaire",
-    description:
-      "Des messages clairs et locaux pour renforcer la prévention et l'autonomie des communautés.",
-  },
-  {
-    title: "Partenariats durables",
-    description:
-      "Une collaboration étroite avec les autorités, les ONG et les prestataires pour un impact partagé.",
-  },
-] as const;
+"use client";
+
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
 export default function TrustPillars() {
+  const { t } = useLanguage();
+  const trust = t.trust;
+
   return (
     <section className="section-pad bg-cream" aria-labelledby="trust-heading">
       <div className="container-site">
         <div className="max-w-2xl">
-          <p className="eyebrow text-gold-deep">Nos fondations</p>
+          <p className="eyebrow text-gold-deep">{trust.eyebrow}</p>
           <h2 id="trust-heading" className="mt-3 text-3xl md:text-4xl">
-            Ce qui guide notre action
+            {trust.title}
           </h2>
-          <p className="mt-3 text-ink-muted">
-            Trois piliers pour bâtir la confiance et mesurer la pertinence de
-            chaque programme.
-          </p>
+          <p className="mt-3 text-ink-muted">{trust.lead}</p>
         </div>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
-          {PILLARS.map((pillar, index) => (
+          {trust.pillars.map((pillar, index) => (
             <li
               key={pillar.title}
               className="card-lift group relative border border-border bg-cream p-7"
@@ -45,7 +31,7 @@ export default function TrustPillars() {
               </p>
               <h3 className="mt-3 text-xl">{pillar.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                {pillar.description}
+                {pillar.desc}
               </p>
             </li>
           ))}

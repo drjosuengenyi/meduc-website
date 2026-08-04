@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Providers from "@/components/Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     "MEDUC GM déploie des programmes d'accès aux soins et d'éducation sanitaire pour les communautés d'Afrique.",
-  metadataBase: new URL("https://meduc.example.org"),
+  metadataBase: new URL("https://meduc.tech"),
 };
 
 export default function RootLayout({
@@ -17,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className="min-h-screen font-sans antialiased">{children}</body>
+    <html lang="fr" data-lang="fr" suppressHydrationWarning>
+      <body className="min-h-screen font-sans antialiased">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

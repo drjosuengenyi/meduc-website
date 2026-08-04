@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import Hero from "@/components/Hero";
 import TrustPillars from "@/components/TrustPillars";
 import AudienceGrid from "@/components/AudienceGrid";
@@ -8,20 +9,14 @@ import partenairesData from "@/content/partenaires.json";
 import type { PartenairesContent } from "@/types/content";
 import Link from "next/link";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title: "Présentation",
-};
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
 const partenaires = partenairesData as PartenairesContent;
 
-const EVOUCHER_POINTS = [
-  "Bons numériques remis aux ménages éligibles",
-  "Orientation claire vers les établissements du réseau",
-  "Validation simple et prise en charge sur place",
-] as const;
+export default function PresentationPage() {
+  const { t } = useLanguage();
+  const p = t.presentation;
 
-export default function HomePage() {
   return (
     <>
       <Hero />
@@ -35,7 +30,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/3] overflow-hidden border border-border">
             <Image
               src="/images/evoucher-care.svg"
-              alt="Agent de santé remettant un e-voucher à un patient dans un centre de soins"
+              alt={p.evoucherAlt}
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -46,16 +41,13 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <p className="eyebrow text-gold-deep">Notre dispositif phare</p>
+            <p className="eyebrow text-gold-deep">{p.evoucherEyebrow}</p>
             <h2 id="home-evoucher" className="mt-3 text-3xl md:text-4xl">
-              e-Voucher : le soin à portée de main
+              {p.evoucherTitle}
             </h2>
-            <p className="mt-4 text-ink-muted">
-              Un outil numérique léger qui relie bénéficiaires et
-              établissements partenaires, sans complexité inutile.
-            </p>
+            <p className="mt-4 text-ink-muted">{p.evoucherLead}</p>
             <ul className="mt-6 space-y-3">
-              {EVOUCHER_POINTS.map((point) => (
+              {p.evoucherPoints.map((point) => (
                 <li key={point} className="flex items-start gap-3 text-sm">
                   <span
                     className="mt-1.5 h-2 w-2 shrink-0 rotate-45 bg-gold"
@@ -67,7 +59,7 @@ export default function HomePage() {
             </ul>
             <div className="mt-8">
               <Link href="/evoucher/" className="btn-primary">
-                Comprendre le parcours
+                {p.evoucherCta}
               </Link>
             </div>
           </div>
@@ -79,17 +71,12 @@ export default function HomePage() {
 
       <section className="bg-navy-soft py-16 md:py-20" aria-label="Citation">
         <div className="container-site max-w-3xl text-center">
-          <span
-            className="mx-auto block h-px w-16 bg-gold"
-            aria-hidden
-          />
+          <span className="mx-auto block h-px w-16 bg-gold" aria-hidden />
           <blockquote className="mt-8 font-serif text-2xl leading-relaxed text-cream md:text-3xl">
-            « Chaque famille mérite un chemin clair vers les soins essentiels.
-            C&apos;est la promesse que nous tenons, communauté après
-            communauté. »
+            {p.quote}
           </blockquote>
           <p className="mt-6 text-xs uppercase tracking-[0.25em] text-gold">
-            L&apos;équipe MEDUC
+            {p.quoteBy}
           </p>
         </div>
       </section>
@@ -98,17 +85,14 @@ export default function HomePage() {
         <div className="container-site">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
-              <p className="eyebrow text-gold-deep">Écosystème</p>
+              <p className="eyebrow text-gold-deep">{p.partnersEyebrow}</p>
               <h2 id="home-partners" className="mt-3 text-3xl md:text-4xl">
-                Ils avancent avec nous
+                {p.partnersTitle}
               </h2>
-              <p className="mt-3 text-ink-muted">
-                Institutions, ONG et acteurs de terrain engagés pour un accès
-                équitable aux soins.
-              </p>
+              <p className="mt-3 text-ink-muted">{p.partnersLead}</p>
             </div>
             <Link href="/partenaires/" className="btn-outline shrink-0">
-              Tous les partenaires
+              {p.partnersCta}
             </Link>
           </div>
           <div className="mt-10">
@@ -120,14 +104,11 @@ export default function HomePage() {
       <section className="border-t border-border bg-navy section-pad">
         <div className="container-site flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div className="max-w-xl">
-            <h2 className="text-3xl text-cream">Parlons de votre contexte</h2>
-            <p className="mt-3 text-cream/70">
-              Autorité sanitaire, établissement ou organisation partenaire :
-              échangeons sur vos priorités d&apos;accès aux soins.
-            </p>
+            <h2 className="text-3xl text-cream">{p.ctaTitle}</h2>
+            <p className="mt-3 text-cream/70">{p.ctaLead}</p>
           </div>
           <Link href="/contact/" className="btn-primary shrink-0">
-            Nous contacter
+            {p.ctaButton}
           </Link>
         </div>
       </section>
