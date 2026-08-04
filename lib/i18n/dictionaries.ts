@@ -196,14 +196,14 @@ const fr: Dictionary = {
   },
   about: {
     h1: "À propos de nous",
-    identityEyebrow: "INSTITUTIONNEL",
-    identityTitle: "Identité institutionnelle",
+    identityEyebrow: "IDENTITÉ",
+    identityTitle: "Ce que nous sommes",
     identityBody:
-      "Meduc GM est une société HealthTech et FinTech double-incorporée, opérant en République Démocratique du Congo et en Afrique du Sud. Enregistrée en RDC sous le numéro RCCM CD/KNG/RCCM/25-B-01820, et en Afrique du Sud sous le numéro PTY (LTD) 2025/780904/07, avec le numéro D-U-N-S international 366868380, Meduc GM bénéficie d'une structure juridique solide et vérifiable sur deux juridictions africaines. Cette double incorporation reflète une ambition clairement pan-africaine, ancrée dans les réalités du terrain congolais.",
-    productEyebrow: "PRODUIT",
-    productTitle: "Mission et produit",
+      "Meduc GM SARL est une entreprise privée congolaise à vocation HealthTech et FinTech, double-incorporée en République Démocratique du Congo sous le numéro RCCM CD/KNG/RCCM/25-B-01820, ID National 01-M7201-N73456G, et en Afrique du Sud sous le numéro PTY (LTD) 2025/780904/07, avec le numéro D-U-N-S international 366868380. Portée par une équipe de médecins et d'experts pluridisciplinaires engagés, Meduc GM a pour mission principale de renforcer le système de santé en République Démocratique du Congo en soutien au Ministère de la Santé Publique, Hygiène et Prévention, dans la matérialisation du Plan National de Développement Sanitaire (PNDS) et la réalisation de la Couverture Santé Universelle pour les 115 millions de citoyens congolais.",
+    productEyebrow: "SOLUTION",
+    productTitle: "Solution sur le marché MeducAHT",
     productBody:
-      "Meduc GM développe et opère MeducAHT — l'Africa Health e-Voucher — le premier système de financement de soins de santé à réserve intégrale conçu pour les 115 millions de citoyens congolais, dont 50 millions sont non-bancarisés et structurellement exclus des soins. Propulsé par Microsoft Azure, MeducAHT permet l'accès aux soins ICD-10 via USSD *707# sans smartphone ni compte bancaire, avec une distribution automatique et immuable des flux financiers entre prestataires, État et plateforme.",
+      "Meduc GM développe des solutions innovantes convergentes vers l'amélioration de l'accès aux soins — notamment en milieu rural — la qualité des services, la formation des professionnels de santé et la digitalisation du secteur. Son produit phare, MeducAHT (Africa Health e-Voucher), est le premier système de financement de soins de santé à réserve intégrale de la RDC, accessible via USSD *707# sans smartphone ni compte bancaire, propulsé par Microsoft Azure et conforme aux standards ICD-10. En collaboration avec les institutions nationales et internationales, les partenaires du secteur et les opérateurs télécoms, Meduc GM contribue activement à bâtir un système de santé équitable, durable et résilient — transformant la crise du secteur en une opportunité d'investissement à impact mesurable pour l'ensemble de l'écosystème congolais.",
     cardAlt:
       "Carte MEDUC GM et smartphone — identité institutionnelle HealthTech FinTech",
     ctaTitle: "Découvrir l'équipe",
@@ -332,10 +332,10 @@ const fr: Dictionary = {
           "Collectif d'organisations non gouvernementales actives en santé communautaire.",
         logoAlt: "Logo Réseau ONG Santé",
       },
-      "p-edu": {
+      "p-azure": {
         description:
-          "Partenaire académique pour la formation des agents de santé et l'éducation sanitaire.",
-        logoAlt: "Logo Institut de formation sanitaire",
+          "Meduc GM a bâti l'intégralité de l'infrastructure MeducAHT sur Microsoft Azure — l'un des clouds les plus sécurisés au monde. Les données de santé des patients sont hautement sécurisées, garantissant leur souveraineté sur le continent africain, en conformité avec la loi congolaise sur le numérique (HAIPPA). La plateforme repose sur le Confidential Ledger (registre immuable), le Key Vault HSM (clés cryptographiques non-exportables) et Microsoft Defender for Cloud. Soutenu par le programme Microsoft Founders Hub, Meduc GM bénéficie d'une reconnaissance officielle Microsoft — gage de crédibilité, de fiabilité et de confiance institutionnelle pour l'ensemble de l'écosystème.",
+        logoAlt: "Microsoft Azure — infrastructure cloud MeducAHT",
       },
       "p-tech": {
         description:
@@ -604,14 +604,14 @@ const en: Dictionary = {
   },
   about: {
     h1: "About us",
-    identityEyebrow: "INSTITUTIONAL",
-    identityTitle: "Institutional identity",
+    identityEyebrow: "IDENTITY",
+    identityTitle: "Who we are",
     identityBody:
-      "Meduc GM is a dual-incorporated HealthTech and FinTech company operating in the Democratic Republic of the Congo and South Africa. Registered in the DRC under RCCM CD/KNG/RCCM/25-B-01820, and in South Africa under PTY (LTD) 2025/780904/07, with international D-U-N-S number 366868380, Meduc GM benefits from a solid, verifiable legal structure across two African jurisdictions. This dual incorporation reflects a clearly pan-African ambition, rooted in Congolese realities on the ground.",
-    productEyebrow: "PRODUCT",
-    productTitle: "Mission and product",
+      "Meduc GM SARL is a Congolese private company with a HealthTech and FinTech vocation, dual-incorporated in the Democratic Republic of the Congo under RCCM CD/KNG/RCCM/25-B-01820, National ID 01-M7201-N73456G, and in South Africa under PTY (LTD) 2025/780904/07, with international D-U-N-S number 366868380. Driven by a team of physicians and committed multidisciplinary experts, Meduc GM's primary mission is to strengthen the health system in the Democratic Republic of the Congo in support of the Ministry of Public Health, Hygiene and Prevention, in delivering the National Health Development Plan (PNDS) and achieving Universal Health Coverage for 115 million Congolese citizens.",
+    productEyebrow: "SOLUTION",
+    productTitle: "Market solution MeducAHT",
     productBody:
-      "Meduc GM develops and operates MeducAHT — the Africa Health e-Voucher — the first full-reserve healthcare financing system designed for 115 million Congolese citizens, including 50 million who are unbanked and structurally excluded from care. Powered by Microsoft Azure, MeducAHT enables access to ICD-10 care via USSD *707# without a smartphone or bank account, with automatic and immutable distribution of financial flows among providers, the State, and the platform.",
+      "Meduc GM develops innovative solutions converging toward improved access to care — especially in rural areas — service quality, training of health professionals and sector digitalization. Its flagship product, MeducAHT (Africa Health e-Voucher), is the DRC's first full-reserve healthcare financing system, accessible via USSD *707# without a smartphone or bank account, powered by Microsoft Azure and compliant with ICD-10 standards. In collaboration with national and international institutions, sector partners and telecom operators, Meduc GM actively contributes to building an equitable, durable and resilient health system — turning the sector crisis into a measurable impact investment opportunity for the entire Congolese ecosystem.",
     cardAlt:
       "MEDUC GM card and smartphone — HealthTech FinTech institutional identity",
     ctaTitle: "Meet the team",
@@ -736,10 +736,10 @@ const en: Dictionary = {
           "Collective of non-governmental organisations active in community health.",
         logoAlt: "Health NGO Network logo",
       },
-      "p-edu": {
+      "p-azure": {
         description:
-          "Academic partner for training health workers and health education.",
-        logoAlt: "Health Training Institute logo",
+          "Meduc GM built the entire MeducAHT infrastructure on Microsoft Azure — one of the world's most secure clouds. Patient health data is highly secured, ensuring sovereignty on the African continent, in compliance with Congolese digital law (HAIPPA). The platform relies on Confidential Ledger (immutable registry), Key Vault HSM (non-exportable cryptographic keys) and Microsoft Defender for Cloud. Supported by the Microsoft Founders Hub programme, Meduc GM benefits from official Microsoft recognition — a mark of credibility, reliability and institutional trust for the entire ecosystem.",
+        logoAlt: "Microsoft Azure — MeducAHT cloud infrastructure",
       },
       "p-tech": {
         description:

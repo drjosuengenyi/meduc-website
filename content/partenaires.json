@@ -25,11 +25,12 @@
       "logoAlt": "Logo Réseau ONG Santé"
     },
     {
-      "id": "p-edu",
-      "name": "Institut de formation sanitaire",
-      "description": "Partenaire académique pour la formation des agents de santé et l'éducation sanitaire.",
-      "logo": "/images/partenaires/institut-formation.svg",
-      "logoAlt": "Logo Institut de formation sanitaire"
+      "id": "p-azure",
+      "name": "Microsoft Azure",
+      "description": "Meduc GM a bâti l'intégralité de l'infrastructure MeducAHT sur Microsoft Azure — l'un des clouds les plus sécurisés au monde. Les données de santé des patients sont hautement sécurisées, garantissant leur souveraineté sur le continent africain, en conformité avec la loi congolaise sur le numérique (HAIPPA). La plateforme repose sur le Confidential Ledger (registre immuable), le Key Vault HSM (clés cryptographiques non-exportables) et Microsoft Defender for Cloud. Soutenu par le programme Microsoft Founders Hub, Meduc GM bénéficie d'une reconnaissance officielle Microsoft — gage de crédibilité, de fiabilité et de confiance institutionnelle pour l'ensemble de l'écosystème.",
+      "logo": "/images/partenaires/microsoft-azure.png",
+      "logoAlt": "Microsoft Azure — infrastructure cloud MeducAHT",
+      "url": "https://azure.microsoft.com"
     },
     {
       "id": "p-tech",

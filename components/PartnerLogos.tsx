@@ -28,32 +28,50 @@ export default function PartnerLogos({
         const localized = t.partners.items[partner.id];
         const description = localized?.description ?? partner.description;
         const logoAlt = localized?.logoAlt ?? partner.logoAlt;
+        const isPhoto =
+          partner.logo.endsWith(".png") || partner.logo.endsWith(".jpg");
 
         return (
           <li key={partner.id}>
             {compact ? (
-              <div className="flex h-24 items-center justify-center border border-border bg-cream px-4">
+              <div className="flex h-24 items-center justify-center overflow-hidden border border-border bg-cream px-4">
                 <Image
                   src={partner.logo}
                   alt={logoAlt}
                   width={140}
                   height={48}
-                  className="h-10 w-auto max-w-full object-contain"
+                  className={
+                    isPhoto
+                      ? "h-full w-full object-cover"
+                      : "h-10 w-auto max-w-full object-contain"
+                  }
                 />
               </div>
             ) : (
               <article className="flex h-full flex-col gap-4 border-t border-border pt-6">
-                <div className="flex h-16 items-center">
-                  <Image
-                    src={partner.logo}
-                    alt={logoAlt}
-                    width={160}
-                    height={56}
-                    className="h-12 w-auto max-w-full object-contain"
-                  />
-                </div>
+                {isPhoto ? (
+                  <div className="relative aspect-[16/10] w-full overflow-hidden border border-border bg-navy">
+                    <Image
+                      src={partner.logo}
+                      alt={logoAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 30vw, 90vw"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex h-16 items-center">
+                    <Image
+                      src={partner.logo}
+                      alt={logoAlt}
+                      width={160}
+                      height={56}
+                      className="h-12 w-auto max-w-full object-contain"
+                    />
+                  </div>
+                )}
                 <h3 className="text-lg">{partner.name}</h3>
-                <p className="text-sm leading-relaxed text-ink-muted">
+                <p className="text-justify text-sm leading-relaxed text-ink-muted">
                   {description}
                 </p>
                 {partner.url ? (

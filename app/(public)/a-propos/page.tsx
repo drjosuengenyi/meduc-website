@@ -51,7 +51,7 @@ export default function AProposPage() {
               <h2 className="mt-2 font-serif text-2xl text-cream md:text-[1.75rem]">
                 {a.identityTitle}
               </h2>
-              <p className="mt-4 text-justify text-[13.5px] leading-[1.75] text-cream/80">
+              <p className="mt-4 text-justify text-[13.5px] leading-[1.8] text-cream/85 hyphens-auto">
                 {a.identityBody}
               </p>
             </article>
@@ -65,7 +65,7 @@ export default function AProposPage() {
               <h2 className="mt-2 font-serif text-2xl text-cream md:text-[1.75rem]">
                 {a.productTitle}
               </h2>
-              <p className="mt-4 text-justify text-[13.5px] leading-[1.75] text-cream/80">
+              <p className="mt-4 text-justify text-[13.5px] leading-[1.8] text-cream/85 hyphens-auto">
                 {a.productBody}
               </p>
             </article>
