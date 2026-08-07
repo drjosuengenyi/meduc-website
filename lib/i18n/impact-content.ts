@@ -146,7 +146,7 @@ export const impactContent: Record<"fr" | "en", ImpactContent> = {
             " Les Congolais de l'étranger ne disposent d'aucun mécanisme fiable pour financer les soins de leurs proches en RDC.",
           solutionStrong: "Transfert santé diaspora (DSP).",
           solutionRest:
-            " Les DSP envoient des e-vouchers AHT depuis l'étranger, directement au wallet IDNS du bénéficiaire en RDC — frais 2,5%.",
+            " Les DSP envoient des e-vouchers AHT depuis l'étranger, directement au wallet IDNS du bénéficiaire en RDC.",
         },
       ],
     },
@@ -186,7 +186,7 @@ export const impactContent: Record<"fr" | "en", ImpactContent> = {
           icon: "🌐",
           cat: "Population — Services étendus",
           title: "Bien plus que les soins : un écosystème de services santé",
-          body: "L'IDNS est la porte d'entrée vers un écosystème complet. Microfinance santé : crédits e-vouchers remboursables en plusieurs fois (BNPL santé). Évacuation médicale : e-vouchers AHT couvrent le transport et les soins d'urgence codés. Diaspora (DSP) : envoi d'e-vouchers depuis l'étranger directement au wallet IDNS du proche en RDC (frais 2,5%). Assurance santé : les assureurs émettent des e-vouchers pré-financés pour leurs assurés. Un seul identifiant IDNS, un accès à l'ensemble de l'écosystème.",
+          body: "L'IDNS est la porte d'entrée vers un écosystème complet. Microfinance santé : crédits e-vouchers remboursables en plusieurs fois (BNPL santé). Évacuation médicale : e-vouchers AHT couvrent le transport et les soins d'urgence codés. Diaspora (DSP) : envoi d'e-vouchers depuis l'étranger directement au wallet IDNS du proche en RDC. Assurance santé : les assureurs émettent des e-vouchers pré-financés pour leurs assurés. Un seul identifiant IDNS, un accès à l'ensemble de l'écosystème.",
           tags: [
             "Microfinance",
             "BNPL Santé",
@@ -359,7 +359,7 @@ export const impactContent: Record<"fr" | "en", ImpactContent> = {
             " Congolese abroad have no reliable mechanism to fund care for relatives in the DRC.",
           solutionStrong: "Diaspora health transfer (DSP).",
           solutionRest:
-            " DSPs send AHT e-vouchers from abroad, directly to the beneficiary's IDNS wallet in the DRC — 2.5% fee.",
+            " DSPs send AHT e-vouchers from abroad, directly to the beneficiary's IDNS wallet in the DRC.",
         },
       ],
     },
@@ -398,7 +398,7 @@ export const impactContent: Record<"fr" | "en", ImpactContent> = {
           icon: "🌐",
           cat: "Population — Extended services",
           title: "Far more than care: a health services ecosystem",
-          body: "IDNS is the gateway to a full ecosystem. Health microfinance: e-voucher credits repayable in installments (health BNPL). Medical evacuation: AHT e-vouchers cover transport and coded emergency care. Diaspora (DSP): send e-vouchers from abroad directly to a relative's IDNS wallet in the DRC (2.5% fee). Health insurance: insurers issue pre-funded e-vouchers for their members. One IDNS identifier, access to the entire ecosystem.",
+          body: "IDNS is the gateway to a full ecosystem. Health microfinance: e-voucher credits repayable in installments (health BNPL). Medical evacuation: AHT e-vouchers cover transport and coded emergency care. Diaspora (DSP): send e-vouchers from abroad directly to a relative's IDNS wallet in the DRC. Health insurance: insurers issue pre-funded e-vouchers for their members. One IDNS identifier, access to the entire ecosystem.",
           tags: [
             "Microfinance",
             "Health BNPL",
