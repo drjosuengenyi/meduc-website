@@ -22,21 +22,29 @@
     },
     {
       "id": "cfo-01",
-      "name": "Etienne Mbula",
-      "role": "CFO MEDUC GM, DRC",
-      "bio": "Chief Financial Officer de Meduc GM en RDC. Il supervise la gouvernance financière, la trésorerie et la conformité des flux MeducAHT au service de la solvabilité hospitalière et de la transparence institutionnelle.",
+      "name": "Mr. Etienne Mbula",
+      "role": "Directeur Administratif et Financier",
+      "bio": "Directeur Administratif et Financier de Meduc GM en RDC. Il supervise la gouvernance administrative et financière, la trésorerie et la conformité des flux MeducAHT au service de la solvabilité hospitalière et de la transparence institutionnelle.",
       "image": "/images/equipe/etienne-mbula.png",
-      "imageAlt": "Portrait de Etienne Mbula, CFO MEDUC GM DRC",
+      "imageAlt": "Portrait de Mr. Etienne Mbula, Directeur Administratif et Financier de MEDUC GM",
       "email": "e.mbula@meduc.tech"
     },
     {
       "id": "commercial-01",
-      "name": "Jeremie Tuambilangane",
+      "name": "Jeremie Ngindu",
       "role": "Directeur commercial",
       "bio": "Directeur commercial de Meduc GM. Il développe les partenariats commerciaux, le réseau d'établissements et la croissance de MeducAHT auprès des acteurs de santé, des opérateurs et des institutions en RDC.",
-      "image": "/images/equipe/jeremie-tuambilangane.png",
-      "imageAlt": "Portrait de Jeremie Tuambilangane, Directeur commercial de MEDUC GM",
+      "image": "/images/equipe/jeremie-ngindu.png",
+      "imageAlt": "Portrait de Jeremie Ngindu, Directeur commercial de MEDUC GM",
       "email": "t.jeremie@meduc.tech"
+    },
+    {
+      "id": "qa-01",
+      "name": "Ivon Malengu",
+      "role": "Directeur Assurance Qualité",
+      "bio": "Directeur Assurance Qualité de Meduc GM. Il définit et pilote le système qualité MeducAHT — normes, audits, conformité des parcours de soins et amélioration continue au service de la fiabilité opérationnelle et de la confiance des établissements partenaires.",
+      "image": "/images/equipe/ivon-malengu.svg",
+      "imageAlt": "Portrait de Ivon Malengu, Directeur Assurance Qualité de MEDUC GM"
     },
     {
       "id": "part-03",

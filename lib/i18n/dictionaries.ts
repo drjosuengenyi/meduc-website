@@ -281,7 +281,7 @@ const fr: Dictionary = {
         role: "Directeur commercial",
         bio: "Directeur commercial de Meduc GM. Il développe les partenariats commerciaux, le réseau d'établissements et la croissance de MeducAHT auprès des acteurs de santé, des opérateurs et des institutions en RDC.",
         imageAlt:
-          "Portrait de Jeremie Tuambilangane, Directeur commercial de MEDUC GM",
+          "Portrait de Jeremie Ngindu, Directeur commercial de MEDUC GM",
       },
       "dg-01": {
         role: "DG MEDUC RDC",
@@ -289,9 +289,16 @@ const fr: Dictionary = {
         imageAlt: "Portrait de Aminata Mushiya, DG MEDUC RDC",
       },
       "cfo-01": {
-        role: "CFO MEDUC GM, DRC",
-        bio: "Chief Financial Officer de Meduc GM en RDC. Il supervise la gouvernance financière, la trésorerie et la conformité des flux MeducAHT au service de la solvabilité hospitalière et de la transparence institutionnelle.",
-        imageAlt: "Portrait de Etienne Mbula, CFO MEDUC GM DRC",
+        role: "Directeur Administratif et Financier",
+        bio: "Directeur Administratif et Financier de Meduc GM en RDC. Il supervise la gouvernance administrative et financière, la trésorerie et la conformité des flux MeducAHT au service de la solvabilité hospitalière et de la transparence institutionnelle.",
+        imageAlt:
+          "Portrait de Mr. Etienne Mbula, Directeur Administratif et Financier de MEDUC GM",
+      },
+      "qa-01": {
+        role: "Directeur Assurance Qualité",
+        bio: "Directeur Assurance Qualité de Meduc GM. Il définit et pilote le système qualité MeducAHT — normes, audits, conformité des parcours de soins et amélioration continue au service de la fiabilité opérationnelle et de la confiance des établissements partenaires.",
+        imageAlt:
+          "Portrait de Ivon Malengu, Directeur Assurance Qualité de MEDUC GM",
       },
       "part-03": {
         role: "Directrice des partenariats",
@@ -686,7 +693,7 @@ const en: Dictionary = {
         role: "Commercial Director",
         bio: "Commercial Director of Meduc GM. He develops commercial partnerships, the provider network and MeducAHT growth with health actors, operators and institutions in the DRC.",
         imageAlt:
-          "Portrait of Jeremie Tuambilangane, Commercial Director of MEDUC GM",
+          "Portrait of Jeremie Ngindu, Commercial Director of MEDUC GM",
       },
       "dg-01": {
         role: "DG MEDUC RDC",
@@ -694,9 +701,16 @@ const en: Dictionary = {
         imageAlt: "Portrait of Aminata Mushiya, DG MEDUC RDC",
       },
       "cfo-01": {
-        role: "CFO MEDUC GM, DRC",
-        bio: "Chief Financial Officer of Meduc GM in the DRC. He oversees financial governance, treasury and compliance of MeducAHT flows in support of hospital solvency and institutional transparency.",
-        imageAlt: "Portrait of Etienne Mbula, CFO MEDUC GM DRC",
+        role: "Administrative and Financial Director",
+        bio: "Administrative and Financial Director of Meduc GM in the DRC. He oversees administrative and financial governance, treasury and compliance of MeducAHT flows in support of hospital solvency and institutional transparency.",
+        imageAlt:
+          "Portrait of Mr. Etienne Mbula, Administrative and Financial Director of MEDUC GM",
+      },
+      "qa-01": {
+        role: "Quality Assurance Director",
+        bio: "Quality Assurance Director at Meduc GM. He defines and steers the MeducAHT quality system — standards, audits, care-pathway compliance and continuous improvement for operational reliability and partner facility trust.",
+        imageAlt:
+          "Portrait of Ivon Malengu, Quality Assurance Director of MEDUC GM",
       },
       "part-03": {
         role: "Director of Partnerships",
