@@ -1,10 +1,10 @@
 name: Hostinger FTP Deploy
 
+# Manual only until HOSTINGER_FTP_* secrets are configured.
+# Required secrets: HOSTINGER_FTP_HOST, HOSTINGER_FTP_USER, HOSTINGER_FTP_PASSWORD, HOSTINGER_FTP_REMOTE_DIR
+
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   deploy_hostinger:
@@ -12,6 +12,22 @@ jobs:
     name: Deploy to Hostinger via FTPS
     steps:
       - uses: actions/checkout@v4
+
+      - name: Verify Hostinger secrets
+        env:
+          HOST: ${{ secrets.HOSTINGER_FTP_HOST }}
+          USER: ${{ secrets.HOSTINGER_FTP_USER }}
+          PASS: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          DIR: ${{ secrets.HOSTINGER_FTP_REMOTE_DIR }}
+        run: |
+          missing=0
+          for v in HOST USER PASS DIR; do
+            if [ -z "${!v}" ]; then
+              echo "::error::Missing secret HOSTINGER_FTP_${v/HOST/HOST}"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then exit 1; fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
