@@ -1,0 +1,37 @@
+name: Hostinger FTP Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy_hostinger:
+    runs-on: ubuntu-latest
+    name: Deploy to Hostinger via FTPS
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Build static export
+        run: |
+          npm ci
+          npm run build
+
+      - name: Upload to Hostinger (FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./out/
+          server-dir: ${{ secrets.HOSTINGER_FTP_REMOTE_DIR }}
+          dangerous-clean-slate: false
