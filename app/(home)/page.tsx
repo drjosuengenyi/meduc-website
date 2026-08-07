@@ -700,7 +700,7 @@ export default function HomePage() {
               Distribution automatique — par e-voucher
             </div>
             <div className="burn-title en">
-              Automatic BURN split — per e-voucher
+              Automatic BURN distribution — per e-voucher
             </div>
             <div className="burn-sub fr">
               Chaque e-voucher AHT dépensé déclenche trois flux garantis,

@@ -794,16 +794,16 @@
 }
 .aht .bh {
   background: var(--gold);
-  flex: 76;
+  flex: 1;
 }
 .aht .bd {
   background: var(--azure);
-  flex: 16;
+  flex: 1;
   margin-left: 2px;
 }
 .aht .bm {
   background: rgba(255, 255, 255, 0.25);
-  flex: 8;
+  flex: 1;
   margin-left: 2px;
 }
 .aht .burn-legend {

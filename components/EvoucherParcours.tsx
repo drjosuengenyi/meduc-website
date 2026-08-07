@@ -117,7 +117,7 @@ function CircuitSchema() {
       <text x="362" y="322" fontFamily="ui-monospace,monospace" fontSize="8" fill="#A78BFA">Distribution</text>
 
       <ellipse cx="350" cy="375" rx="70" ry="30" fill="rgba(109,40,217,.15)" stroke="#A78BFA" strokeWidth="1.5" />
-      <text x="350" y="371" textAnchor="middle" fontSize="9" fontWeight="800" fill="#A78BFA">BURN SPLIT</text>
+      <text x="350" y="371" textAnchor="middle" fontSize="9" fontWeight="800" fill="#A78BFA">BURN</text>
       <text x="350" y="385" textAnchor="middle" fontFamily="ui-monospace,monospace" fontSize="7.5" fill="rgba(255,255,255,.4)">Automatique · Instantané</text>
 
       <line x1="290" y1="398" x2="150" y2="455" stroke="#C9A059" strokeWidth="1.5" markerEnd="url(#arr-gold)" />
